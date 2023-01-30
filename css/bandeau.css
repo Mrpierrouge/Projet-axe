@@ -1,0 +1,20 @@
+#bandeau{
+    flex-wrap: wrap;
+    align-items: center;
+    z-index: 3;
+	display: flex;
+
+	padding-top: 15px;
+	
+	padding-right:3%;
+	padding-left:3%;
+	margin-top: 10px;
+	
+	justify-content: space-between;
+	
+	position: sticky;
+	bottom: 0px;
+}
+/* #bandeau p{
+	
+} */

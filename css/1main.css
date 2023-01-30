@@ -1,0 +1,24 @@
+@import url(./bandeau.css);
+@import url(./navbar.css);
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.theme_dark{
+    color: #e1E1eb;
+    background-color: #405082;
+}
+.theme_light{
+    color:#405082;
+    background-color: #e1E1eb;
+}
+.theme_dark > a{
+    color: #e1E1eb;
+    background-color: #405082;
+}
+.theme_light > a {
+    color:#405082;
+    background-color: #e1E1eb;
+}

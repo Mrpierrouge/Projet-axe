@@ -10,6 +10,8 @@ const ChangerTheme = () => {
         bandeau.classList.remove("theme_dark");
         liens.classList.add("theme_light");
         liens.classList.remove("theme_dark");
+        postes.classList.add("theme_light");
+        postes.classList.remove("theme_dark");
     }
     else {   
         body.classList.add("theme_light");
@@ -20,14 +22,16 @@ const ChangerTheme = () => {
         bandeau.classList.add("theme_dark");
         liens.classList.remove("theme_light");
         liens.classList.add("theme_dark");
+        postes.classList.remove("theme_light");
+        postes.classList.add("theme_dark");
     }
-    themelight = !themelight
+    themelight = !themelight;
 }
-
 
 let body = document.getElementById("body");
 let bouton = document.getElementById("theme");
 let bandeau = document.getElementById("bandeau");
 let bande = document.getElementById("bande");
 let liens = document.getElementById("liens");
+let postes = document.getElementsByClassName("post");
 bouton.addEventListener("click", ChangerTheme);

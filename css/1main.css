@@ -9,16 +9,54 @@
 .theme_dark{
     color: #e1E1eb;
     background-color: #405082;
+    transition: 1s;
 }
 .theme_light{
     color:#405082;
     background-color: #e1E1eb;
+    transition: 1s;
 }
 .theme_dark > a{
     color: #e1E1eb;
-    background-color: #405082;
+
+
 }
 .theme_light > a {
     color:#405082;
-    background-color: #e1E1eb;
+}
+.theme_light > a:hover{
+    color: #223264;
+}
+.theme_dark > a:hover{
+    color:white;
+}
+
+#zone_posts{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+.post{
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-self: center;
+    width: 60%;
+    border: 2px;
+    border-color: black;
+    border-style: solid;
+    max-width: 600px;
+}
+.post > h2{
+    justify-self: flex-start;
+}
+.image_post {
+    justify-self:center;
+    align-self:center;
+    width: 80%;
+    height: width;
+    align-self: center;
+    border: 2px;
+    border-color: black;
+    border-style: solid;
 }

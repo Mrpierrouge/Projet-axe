@@ -1,0 +1,14 @@
+#zone_tags{
+    display: flex;
+    flex-direction : row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2px;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+.tags{
+    border: 1px solid black;
+    padding: 1px;
+    cursor: pointer;
+}

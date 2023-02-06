@@ -1,0 +1,22 @@
+.theme_dark{
+    color: #e1E1eb;
+    background-color: #405082;
+    transition: 1s;
+}
+.theme_light{
+    color:#405082;
+    background-color: #e1E1eb;
+    transition: 1s;
+}
+.theme_dark > a{
+    color: #e1E1eb;
+}
+.theme_light > a {
+    color:#405082;
+}
+.theme_light > a:hover{
+    color: #223264;
+}
+.theme_dark > a:hover{
+    color:white;
+}

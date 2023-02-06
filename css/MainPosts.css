@@ -1,0 +1,49 @@
+#zone_posts{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+.post{
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-self: center;
+    width: 60%;
+    border: 2px;
+    border-color: black;
+    border-style: solid;
+    max-width: 600px;
+}
+.post > h2{
+    justify-self: flex-start;
+    margin-left: 10%;;
+}
+.image_post {
+    justify-self:center;
+    align-self:center;
+    width: 80%;
+    align-self: center;
+    border: 2px;
+    border-color: black;
+    border-style: solid;
+}
+.infos_post{
+    width: 80%;
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    padding-top: 10px;
+    align-items: center; 
+}
+
+.description{
+    width: 80%;
+    align-self:center;
+    margin-top: 10px;
+    padding-top: 10px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border: 2px;
+    border-color: black;
+    border-style: solid;
+}

@@ -3,18 +3,32 @@
     align-items: center;
     z-index: 3;
 	display: flex;
-
 	padding-top: 15px;
-	
+	padding-bottom: 15px;
 	padding-right:3%;
 	padding-left:3%;
 	margin-top: 10px;
-	
 	justify-content: space-between;
-	
 	position: sticky;
 	bottom: 0px;
+	border-style: solid;
+	/* border: 1px; */
+	border-color: black;
 }
-/* #bandeau p{
-	
-} */
+#bouton_poster{
+	height: 13vw;
+	width: 13vw;
+	/* background-color: #405082; */
+	position: sticky;
+	z-index: 3;
+	bottom: 0px;
+	float: right;
+	border: 2px solid black;
+	min-height: 45px;
+	min-width: 45px;
+	max-height: 125px;
+	max-width: 125px;
+}
+#bouton_poster:hover{
+	cursor: pointer;
+}

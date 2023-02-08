@@ -34,7 +34,7 @@
         </div>
         
         <div id="liens" class="theme_dark">
-            <a href="#ancrage">Découverte</a>
+            <a href="index.html">Découverte</a>
             <a href="compte.html" class="lien">Compte</a>
             <a href="#ancrage_3" class="lien">Recherche</a>
             <a href="#ancrage_4" class="lien" id="LienParametres">Paramètres</a>
@@ -43,35 +43,9 @@
     </section>
 
     <section id="zone_tags" class="offset-3 col-6">
-
-        <h1>TAGS</h1>
-
-        <div id="tags">
-            <div class="tag">#tag1</div>
-            <div class="tag">#tag2</div>
-            <div class="tag">#tag3</div>
-            <div class="tag">#tag4</div>
-            <div class="tag">#tag5</div>
-            <div class="tag">#tag6</div>
-            <div class="tag">#tag7</div>
-            <div class="tag">#tag8</div>
-            <div class="tag">#tag9</div>
-            <div class="tag">#tag10</div>
-            <div class="tag">#tag11</div>
-            <div class="tag">#tag12</div>
-            <div class="tag">#tag13</div>
-            <div class="tag">#tag14</div>
-        </div>
-
+        <h1>Mes Postes</h1>
     </section>
     
-    <div id="popup_connexion">
-
-        CONNECTEZ-VOUS!
-        <button id="connecte" class="StopPopUp"> STOP </button>
-        <a href="connection.html" id="SeConnecter"> Se connecter</a>
-
-    </div>
 
     <div id="PopUpPoster">
 
@@ -96,7 +70,11 @@
     <section id="zone_posts">
 
         <div class="post theme_dark" >
-            <h2> Titre </h2>
+            <div class="EntetePoste">
+                <h2> Poste 1 </h2>
+                <img src="img/corbeille-blanc.png" class="CorbeilleBlanc">
+                <img src="img/corbeille-bleu.png" class="CorbeilleBleu">
+            </div>
             <img src="img/image-equilibrium.jpeg" class="image_post" alt="Image poste">
             <div class="infos_post">
             </div>
@@ -104,33 +82,60 @@
         </div>
 
         <div class="post theme_dark">
-            <h2> Titre </h2>
+            <div class="EntetePoste">
+                <h2> Poste 2 </h2>
+                <img src="img/corbeille-blanc.png" class="CorbeilleBlanc">
+                <img src="img/corbeille-bleu.png" class="CorbeilleBleu">
+            </div>
+            
             <img src="img/image-equilibrium.jpeg" class="image_post" alt="Image poste">
             <p class="description">Description : Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur ullam tenetur eaque rerum? Voluptatem ullam minima facere cum aliquid totam beatae esse, repellendus rerum debitis voluptatibus a commodi eius corrupti.</p>
         </div>
 
         <div class="post theme_dark">
-            <h2> Titre </h2>
+            <div class="EntetePoste">
+                <h2> Poste 3 </h2>
+                <img src="img/corbeille-blanc.png" class="CorbeilleBlanc">
+                <img src="img/corbeille-bleu.png" class="CorbeilleBleu">
+            </div>
             <img src="img/image-equilibrium.jpeg" class="image_post" alt="Image poste">
             <p class="description">Description : Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur ullam tenetur eaque rerum? Voluptatem ullam minima facere cum aliquid totam beatae esse, repellendus rerum debitis voluptatibus a commodi eius corrupti.</p>
         </div>
 
         <div class="post theme_dark">
-            <h2> Titre </h2>
+            <div class="EntetePoste">
+                <h2> Poste 4 </h2>
+                <img src="img/corbeille-blanc.png" class="CorbeilleBlanc">
+                <img src="img/corbeille-bleu.png" class="CorbeilleBleu">
+            </div>
             <img src="img/image-equilibrium.jpeg" class="image_post" alt="Image poste">
             <p class="description">Description : Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur ullam tenetur eaque rerum? Voluptatem ullam minima facere cum aliquid totam beatae esse, repellendus rerum debitis voluptatibus a commodi eius corrupti.</p>
         </div>
 
         <div class="post theme_dark">
-            <h2> Titre </h2>
+            <div class="EntetePoste">
+                <h2> Poste 5 </h2>
+                <img src="img/corbeille-blanc.png" class="CorbeilleBlanc">
+                <img src="img/corbeille-bleu.png" class="CorbeilleBleu">
+            </div>
             <p class="description">Description : Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur ullam tenetur eaque rerum? Voluptatem ullam minima facere cum aliquid totam beatae esse, repellendus rerum debitis voluptatibus a commodi eius corrupti.</p>
         </div>
 
     </section>
 
+    <div id="popup_connexion">
 
+        CONNECTEZ-VOUS!
+        <button id="connecte" class="StopPopUp"> STOP </button>
+        <a href="connection.html" id="SeConnecter"> Se connecter</a>
 
+    </div>
 
+    <div id="PopUpSupprime">
+        <p> Voulez-vous vraiment supprimer ce post ?</p>
+        <button id="BoutonSupprime"> Oui </button>
+        <button id="SupprimeNon" class="StopPopUp"> Non </button>
+    </div>
     
     <div id="bouton_poster" class="theme_dark">
         <img src="img/AjouterBlanc.png" alt="ajouter" id="AjouteLight" class="PictoAjoute">
@@ -142,6 +147,6 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>  
-    <script src="js/main.js"></script>
+    <script src="js/compte.js"></script>
 </body>
 </html>

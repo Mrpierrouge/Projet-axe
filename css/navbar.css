@@ -10,64 +10,67 @@
     top: 0px;
 	min-height: 50px;
 }
+#bande > h1{
+	justify-items: center;
+	padding-left: 10px;
+	width: 20%;
+}
 #liens{
 	width: 80%;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding-right: 3%;
-    padding-left: 10%;
     min-width: 210px;
 }
 #liens > a {
 	font-size: 30px;
     text-decoration: none;
-    text-align:center;
-
+    text-align: center;
 }
-
+.zone_logo{
+	display: flex;
+	align-items:center;
+	gap: 5px;
+}
 #logo-dark{
     display:none;
 }
 #logo-light{
     display:block;
 }
-
-#menu-hamburger{
-	display: none;
-	width: 5vh;
-	height: 5vh;
-	z-index: 3;
-	background-color: #fff;
-	cursor: pointer;
-}
-#menu-deroulant{
-	display: none;
-	transform: translateX(-100vw);
+#zone_parametres{
+	display: flex;
 	flex-direction: column;
-	justify-content: center;
 	align-items: center;
-	box-shadow: 5px 5px 5px grey;
+	box-shadow: 4px 4px 4px 4px #405082;
+	overflow-x: hidden;
+	position: fixed;
+	transform: translateX(100vw);
+	right: 0;
+	width: 20vw;
+	height: 70vh;
+	top: 105px;
+	justify-content: center;
 }
-
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 850px) {
+	#liens > a{
+		font-size: 20px;
+	}	
+}
+@media screen and (max-width: 767px) {
     #liens{
 		display: none;
 	}
-	#menu-hamburger{
-		display: flex;
+	.zone_logo >img {
+		height: 40px;
 	}
-	#menu-deroulant{
-		display: flex;
-		height: 100%;
-		left: 0;
-		min-width: 300px;
-		overflow-y: hidden;
-		position: fixed;
-		top: 0;
-		transition: 1s;
-		width: 84%;
-		z-index: 9000;
+	.zone_logo>h1{
+		font-size: 15px;
+	}
+}
+@media screen and (max-width: 600px) {
+	h1{
+		font-size: 25px;;
 	}
 }
 

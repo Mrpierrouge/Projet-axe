@@ -32,3 +32,10 @@
 #bouton_poster:hover{
 	cursor: pointer;
 }
+#AjouteDark{
+	display:none;
+}
+.PictoAjoute{
+	width: 100%;
+	height: 100%;
+}

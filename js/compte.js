@@ -21,8 +21,8 @@ const ChangerTheme = () => {
         for (let i = 0; i < postes.length; i++) {
             postes[i].classList.add("theme_light");
             postes[i].classList.remove("theme_dark");
-            // CorbeillesBlanches[i].style.display = "none";
-            // CorbeillesBleues[i].style.display = "flex";
+            CorbeillesBlanches[i].style.display = "none";
+            CorbeillesBleues[i].style.display = "flex";
         }
         LogoBlanc.style.display = "none";
         LogoNoir.style.display = "block";
@@ -47,8 +47,8 @@ const ChangerTheme = () => {
         for (let i = 0; i < postes.length; i++) {
             postes[i].classList.remove("theme_light");
             postes[i].classList.add("theme_dark");
-            // CorbeillesBlanches[i].style.display = "flex";
-            // CorbeillesBleues[i].style.display = "none";
+            CorbeillesBlanches[i].style.display = "flex";
+            CorbeillesBleues[i].style.display = "none";
         
         }
         LogoNoir.style.display = "none";
@@ -190,21 +190,21 @@ document.getElementById("LienParametres").addEventListener("click", DerouleParam
 
 
 
-// const CorbeillePoste = (i) => {
-//     PopUpSupprime.style.display = "flex";
-//     document.getElementById("BoutonSupprime").addEventListener("click", function(){SupprimePoste(i)});
+const CorbeillePoste = (i) => {
+    PopUpSupprime.style.display = "flex";
+    document.getElementById("BoutonSupprime").addEventListener("click", function(){SupprimePoste(i)});
     
-// }
-// const SupprimePoste = (i) => {
-//     PopUpSupprime.style.display = "none";
-//     postes[i].style.display = "none";
-// }
+}
+const SupprimePoste = (i) => {
+    PopUpSupprime.style.display = "none";
+    postes[i].style.display = "none";
+}
 
-// let PopUpSupprime = document.getElementById("PopUpSupprime");
-// let CorbeillesBlanches = document.getElementsByClassName("CorbeilleBlanc");
-// let CorbeillesBleues = document.getElementsByClassName("CorbeilleBleu");
+let PopUpSupprime = document.getElementById("PopUpSupprime");
+let CorbeillesBlanches = document.getElementsByClassName("CorbeilleBlanc");
+let CorbeillesBleues = document.getElementsByClassName("CorbeilleBleu");
 
-// for (let i = 0; i < postes.length; i++) {
-//     CorbeillesBlanches[i].addEventListener("click", function(){CorbeillePoste(i)});
-//     CorbeillesBleues[i].addEventListener("click", function(){CorbeillePoste(i)});
-// }
+for (let i = 0; i < postes.length; i++) {
+    CorbeillesBlanches[i].addEventListener("click", function(){CorbeillePoste(i)});
+    CorbeillesBleues[i].addEventListener("click", function(){CorbeillePoste(i)});
+}

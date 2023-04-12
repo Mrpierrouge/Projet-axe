@@ -19,9 +19,10 @@
 	height: 13vw;
 	width: 13vw;
 	/* background-color: #405082; */
-	position: sticky;
+	position: fixed;
 	z-index: 3;
 	bottom: 0px;
+	right: 0px;
 	float: right;
 	border: 2px solid black;
 	min-height: 45px;

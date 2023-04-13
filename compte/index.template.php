@@ -21,10 +21,14 @@
         <section id="zone-test" class="offset-3 col-6">
         <h2>
         Vous êtes actuellement connecté sous le profil de : ' . $_SESSION['user_actif']['pseudo'] . '
-        </h2>' . ' 
+        </h2>' . '<form action="deconnexion.php" method="POST">
+      <input type="hidden" name="form" value="formulaire_deconnexion">
+      <input type="submit" value="Se déconnecter">
+      </form>' . '
         </section>
         <br><br><br>';
-        echo '<section id="zone_posts">';
+        echo '<section id="zone_posts">
+        <h1>Vos postes</h1>';
         foreach ($postes as $poste) {
             echo '
             <div class="post theme_dark">
@@ -55,16 +59,12 @@
         }
         echo '</section>';
         echo '<br><br><br>';
-        echo '<form action="deconnexion.php" method="POST">
-      <input type="hidden" name="form" value="formulaire_deconnexion">
-      <input type="submit" value="Se déconnecter">
-      </form>';
         echo '
         <div id="bouton_poster" class="theme_dark">
             <img src="../img/AjouterBlanc.png" alt="ajouter" id="AjouteLight" class="PictoAjoute">
             <img src="../img/AjouterBleu.png" alt="ajouter" id="AjouteDark" class="PictoAjoute">
         </div>';
-        echo'<script src="../js/popup_poster.js">
+        echo '<script src="../js/popup_poster.js">
         </script>';
 
     } elseif (!isset($_SESSION['user_actif']['pseudo'])) {

@@ -86,6 +86,7 @@
 
     <?php if (!isset($_SESSION['user_actif']['pseudo'])) {
         echo '<script>
+    AScroll = 0;
     const ScrollConnexion = () => {
             if (AScroll > 100) {
                 popup_connexion.style.opacity = 1;

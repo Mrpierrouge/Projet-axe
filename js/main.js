@@ -160,12 +160,6 @@ const StopPopUp = () => {
 
 ////Popup en scrollant
 
-
-
-
-bouton_connecte.addEventListener("click",StopPopUp);
-
-
 for (let i = 0; i < boutons_stop_popups.length; i++) {
     boutons_stop_popups[i].addEventListener("click",StopPopUp);
     

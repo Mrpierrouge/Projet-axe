@@ -24,8 +24,7 @@
 #liens_menu{
 	display: flex;
 	flex-direction: column;
-	gap: 10vh;
-    
+	gap: 10vh; 
 }
 #liens_menu > a{
 	text-decoration: none;

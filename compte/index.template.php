@@ -14,7 +14,16 @@
 <body id="body" class="theme_light">
 
     <?php require_once '../navbar.php'; ?>
+
+    
     <?php if (isset($_SESSION['user_actif']['pseudo'])) {
+        echo'<br>
+        <section id="zone-test" class="offset-3 col-6">
+        <h2>
+        Vous êtes actuellement connecté sous le profil de : ' .$_SESSION['user_actif']['pseudo'] .'
+        </h2>' .' 
+        </section>
+        <br><br><br>';
         echo '<section id="zone_posts">';
         foreach ($postes as $poste) {
             echo '
@@ -54,6 +63,9 @@
     } elseif (!isset($_SESSION['user_actif']['pseudo'])) {
         echo '
         <section id="zone_formulaires" class="offset-3 col-6">
+        <div>
+        <p>Créer un compte</p>
+        <br>
         <form action="ajout_profil.php" method="POST">
         <input type="hidden" name="form" value="formulaire_ajout_compte">
         <label for="contenu">Nom</label>
@@ -82,6 +94,10 @@
         <br>
         <input type="submit" value="Envoyer">
         </form>
+        </div>
+        <div>
+        <p>Se connecter</p>
+        <br>
         <form action="" method="POST">
           <input type="hidden" name="form" value="formulaire_connection">
           <label for="contenu">Pseudo :</label>
@@ -94,6 +110,7 @@
           <br>
           <input type="submit" value="Envoyer">
         </form>
+        </div>
         </section>
         ';
     } ?>
@@ -101,7 +118,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
-    <script src="../js/main.js"></script>
+    <script src="../js/test.js"></script>
 </body>
 
 </html>

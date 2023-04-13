@@ -1,47 +1,7 @@
-            //// appel du document
-
-//// pour theme de couleur
-
-let LiensMenu = document.getElementById("liens_menu");
-let LogoBlanc = document.getElementById("logo-light");
-let LogoNoir = document.getElementById("logo-dark");
-let AjouteBlanc = document.getElementById("AjouteLight");
-let AjouteNoir = document.getElementById("AjouteDark");
-let body = document.getElementById("body");
-let bouton_poster = document.getElementById("bouton_poster");
-let bande = document.getElementById("bande");
-let liens = document.getElementById("liens");
 
 
-//// pour la popup en scrollant
-
-let bouton_connecte = document.getElementById("connecte");
-let popup_connexion = document.getElementById("popup_connexion");
-let zone_postes = document.getElementById("zone_posts");
-let popups = document.getElementsByClassName("popup");
-let boutons_stop_popups = document.getElementsByClassName("StopPopUp");
-
-//// pour menu déroulant
-
-let MenuDeroulant = document.getElementById("menu-deroulant");
-let ZoneTags = document.getElementById("zone_tags");
-let zone_parametres = document.getElementById("zone_parametres");
-
-
-//// appel des éléments de postes
-
-let postes = document.getElementsByClassName("post");
-let CorbeillesBlanches = document.getElementsByClassName("CorbeilleBlanc");
-let CorbeillesBleues = document.getElementsByClassName("CorbeilleBleu");
-
-let PopUpSupprime = document.getElementById("PopUpSupprime");
-
-
-
-            ////appel des différentes fonctions
 
 ////theme de couleur
-
 
 
 
@@ -135,25 +95,22 @@ const ChangerTheme = () => {
 
 let themelight = true;
 
+let LiensMenu = document.getElementById("liens_menu");
+let LogoBlanc = document.getElementById("logo-light");
+let LogoNoir = document.getElementById("logo-dark");
+let AjouteBlanc = document.getElementById("AjouteLight");
+let AjouteNoir = document.getElementById("AjouteDark");
+let body = document.getElementById("body");
+let bouton_poster = document.getElementById("bouton_poster");
+let bande = document.getElementById("bande");
+let liens = document.getElementById("liens");
+let postes = document.getElementsByClassName("post");
+
 
 let BouTonTheme = document.getElementsByClassName("BoutonTheme");
 for (let i = 0; i < BouTonTheme.length; i++) {
     BouTonTheme[i].addEventListener("click", ChangerTheme);  
 }
-
-
-//// Stop popups
-
-
-const StopPopUp = () => {
-    zone_postes.style.filter = "blur(0px)";
-    ZoneTags.style.filter = "blur(0px)";
-    for (let i = 0; i < popups.length; i++) {
-        popups[i].style.display = "none";
-
-    }
-}
-
 
 
 
@@ -162,9 +119,36 @@ const StopPopUp = () => {
 
 
 
-bouton_connecte.addEventListener("click",StopPopUp);
+// const ScrollConnexion = () => {
+//     if (!EstConnecté) {
+//         if (AScroll > 100) {
+//             popup_connexion.style.opacity = 1;
+//             popup_connexion.style.display = "flex";
+//             zone_postes.style.filter = "blur(15px)";
+//             ZoneTags.style.filter = "blur(15px)";
+//         }
+//         AScroll = AScroll + 1;
+//     }
+    
+// }
+const StopPopUp = () => {
+    // popup_connexion.style.opacity = 0;
+    // popup_connexion.style.display = "none";
+    // zone_postes.style.filter = "blur(0px)";
+    // ZoneTags.style.filter = "blur(0px)";
+    for (let i = 0; i < popups.length; i++) {
+        popups[i].style.display = "none";
 
+    }
+}
 
+let bouton_connecte = document.getElementById("connecte");
+let popup_connexion = document.getElementById("popup_connexion");
+let zone_postes = document.getElementById("zone_posts");
+// bouton_connecte.addEventListener("click",StopPopUp);
+
+let popups = document.getElementsByClassName("popup");
+let boutons_stop_popups = document.getElementsByClassName("StopPopUp");
 for (let i = 0; i < boutons_stop_popups.length; i++) {
     boutons_stop_popups[i].addEventListener("click",StopPopUp);
     
@@ -176,21 +160,24 @@ for (let i = 0; i < boutons_stop_popups.length; i++) {
 
 
 
-const Poster = () =>{
-    PopUpPoster.style.display = "flex";
-    PopUpPoster.style.opacity = 1;
-}
-const StopPoster = () =>{
-    PopUpPoster.style.display = "none";
-    PopUpPoster.style.opacity = 0;
-}
 
-document.getElementById("bouton_poster").addEventListener("click", Poster);
-document.getElementById("StopPoster").addEventListener("click", StopPoster);
+
+// const Poster = () =>{
+//     PopUpPoster.style.display = "flex";
+//     PopUpPoster.style.opacity = 1;
+// }
+// const StopPoster = () =>{
+//     PopUpPoster.style.display = "none";
+//     PopUpPoster.style.opacity = 0;
+// }
+
+// document.getElementById("bouton_poster").addEventListener("click", Poster);
+// document.getElementById("StopPoster").addEventListener("click", StopPoster);
 
 
 
 ///////Menus déroulants apparaissant sur les cotés
+
 
 
 
@@ -224,11 +211,15 @@ const DerouleParametres = () => {
 ParametresEstOuvert = true;
 MenuEstOuvert = true;
 
+MenuDeroulant = document.getElementById("menu-deroulant");
 
+// let ZoneTags = document.getElementById("zone_tags");
+let zone_parametres = document.getElementById("zone_parametres");
 
 document.getElementById("menu-hamburger").addEventListener("click", DerouleMenu);
 document.getElementById("StopMenu").addEventListener("click", DerouleMenu);
 document.getElementById("LienParametres").addEventListener("click", DerouleParametres);
+
 
 
 
@@ -238,9 +229,17 @@ document.getElementById("LienParametres").addEventListener("click", DerouleParam
 
 const CorbeillePoste = (i) => {
     PopUpSupprime.style.display = "flex";
+    document.getElementById("BoutonSupprime").addEventListener("click", function(){SupprimePoste(i)});
+    
+}
+const SupprimePoste = (i) => {
+    PopUpSupprime.style.display = "none";
+    postes[i].style.display = "none";
 }
 
-
+let PopUpSupprime = document.getElementById("PopUpSupprime");
+let CorbeillesBlanches = document.getElementsByClassName("CorbeilleBlanc");
+let CorbeillesBleues = document.getElementsByClassName("CorbeilleBleu");
 
 for (let i = 0; i < CorbeillesBlanches.length; i++) {
     CorbeillesBlanches[i].addEventListener("click", function(){CorbeillePoste(i)});

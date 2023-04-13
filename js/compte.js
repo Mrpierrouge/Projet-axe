@@ -1,9 +1,68 @@
+            //// appel du document
+
+//// pour theme de couleur
+
+let LiensMenu = document.getElementById("liens_menu");
+let LogoBlanc = document.getElementById("logo-light");
+let LogoNoir = document.getElementById("logo-dark");
+let AjouteBlanc = document.getElementById("AjouteLight");
+let AjouteNoir = document.getElementById("AjouteDark");
+let body = document.getElementById("body");
+let bouton_poster = document.getElementById("bouton_poster");
+let bande = document.getElementById("bande");
+let liens = document.getElementById("liens");
+
+
+//// pour la popup en scrollant
+
+
+let zone_postes = document.getElementById("zone_posts");
+let popups = document.getElementsByClassName("popup");
+let boutons_stop_popups = document.getElementsByClassName("StopPopUp");
+
+//// pour menu déroulant
+
+let MenuDeroulant = document.getElementById("menu-deroulant");
+
+let zone_parametres = document.getElementById("zone_parametres");
+
+
+//// appel des éléments de postes
+
+let postes = document.getElementsByClassName("post");
+let CorbeillesBlanches = document.getElementsByClassName("CorbeilleBlanc");
+let CorbeillesBleues = document.getElementsByClassName("CorbeilleBleu");
+
+let PopUpSupprime = document.getElementById("PopUpSupprime");
+
+
+
+            ////appel des différentes fonctions
+
 ////theme de couleur
 
 
 
+
 const ChangerTheme = () => {
-    if (themelight) {     
+    // let darks = document.getElementsByClassName("theme_dark");
+    // let lights = document.getElementsByClassName("theme_light");
+    // let sombre = darks;
+    // let clair = lights;
+    if (themelight) {   
+    //     for (let i = 0; i < sombre.length; i++) {
+    //         sombre[i].classList.add("theme_light");
+    //         sombre[i].classList.remove("theme_dark");
+            
+    //     } 
+    //     for (let i = 0; i < clair.length; i++) {
+    //         clair[i].classList.remove("theme_light");
+    //         clair[i].classList.add("theme_dark"); 
+    //     }   
+        // darks.classList.add("theme_light");
+        // darks.classList.remove("theme_dark");
+        // lights.classList.remove("theme_light");
+        // lights.classList.add("theme_dark");
         body.classList.add("theme_dark");
         body.classList.remove("theme_light");
         bande.classList.add("theme_light");
@@ -21,15 +80,27 @@ const ChangerTheme = () => {
         for (let i = 0; i < postes.length; i++) {
             postes[i].classList.add("theme_light");
             postes[i].classList.remove("theme_dark");
+        }
+        for (let i = 0; i < CorbeillesBlanches.length; i++) {
             CorbeillesBlanches[i].style.display = "none";
             CorbeillesBleues[i].style.display = "flex";
         }
+        
         LogoBlanc.style.display = "none";
         LogoNoir.style.display = "block";
         AjouteNoir.style.display = "block";
         AjouteBlanc.style.display = "none";
     }
     else {   
+        // for (let i = 0; i < darks.length; i++) {
+        //     darks[i].classList.remove("theme_light");
+        //     darks[i].classList.add("theme_dark");
+            
+        // } 
+        // for (let i = 0; i < lights.length; i++) {
+        //     lights[i].classList.add("theme_light");
+        //     lights[i].classList.remove("theme_dark"); 
+        // }
         body.classList.add("theme_light");
         body.classList.remove("theme_dark");
         bande.classList.remove("theme_light");
@@ -47,9 +118,11 @@ const ChangerTheme = () => {
         for (let i = 0; i < postes.length; i++) {
             postes[i].classList.remove("theme_light");
             postes[i].classList.add("theme_dark");
+
+        }
+        for (let i = 0; i < CorbeillesBlanches.length; i++) {
             CorbeillesBlanches[i].style.display = "flex";
             CorbeillesBleues[i].style.display = "none";
-        
         }
         LogoNoir.style.display = "none";
         LogoBlanc.style.display = "block";
@@ -61,17 +134,6 @@ const ChangerTheme = () => {
 
 let themelight = true;
 
-let LiensMenu = document.getElementById("liens_menu");
-let LogoBlanc = document.getElementById("logo-light");
-let LogoNoir = document.getElementById("logo-dark");
-let AjouteBlanc = document.getElementById("AjouteLight");
-let AjouteNoir = document.getElementById("AjouteDark");
-let body = document.getElementById("body");
-let bouton_poster = document.getElementById("bouton_poster");
-let bande = document.getElementById("bande");
-let liens = document.getElementById("liens");
-let postes = document.getElementsByClassName("post");
-
 
 let BouTonTheme = document.getElementsByClassName("BoutonTheme");
 for (let i = 0; i < BouTonTheme.length; i++) {
@@ -79,43 +141,19 @@ for (let i = 0; i < BouTonTheme.length; i++) {
 }
 
 
-
-////Popup en scrollant
-
+//// Stop popups
 
 
-
-const ScrollConnexion = () => {
-    if (!EstConnecté) {
-        if (AScroll > 100) {
-            popup_connexion.style.opacity = 1;
-            popup_connexion.style.display = "flex";
-            zone_postes.style.filter = "blur(15px)";
-            ZoneTags.style.filter = "blur(15px)";
-        }
-        AScroll = AScroll + 1;
-    }
-    
-}
 const StopPopUp = () => {
-    popup_connexion.style.opacity = 0;
-    popup_connexion.style.display = "none";
-    zone_postes.style.filter = "blur(0px)";
-    ZoneTags.style.filter = "blur(0px)";
-    AScroll = 0;
-    EstConnecté = true;
+    for (let i = 0; i < popups.length; i++) {
+        popups[i].style.display = "none";
+
+    }
 }
 
-let EstConnecté = false;
-let AScroll = 0;
-
-let bouton_connecte = document.getElementById("connecte");
-let popup_connexion = document.getElementById("popup_connexion");
-let zone_postes = document.getElementById("zone_posts");
-
-document.addEventListener("scroll",ScrollConnexion);
-bouton_connecte.addEventListener("click",StopPopUp);
-
+for (let i = 0; i < boutons_stop_popups.length; i++) {
+    boutons_stop_popups[i].addEventListener("click",StopPopUp);
+}
 
 
 
@@ -125,22 +163,8 @@ bouton_connecte.addEventListener("click",StopPopUp);
 
 
 
-const Poster = () =>{
-    PopUpPoster.style.display = "flex";
-    PopUpPoster.style.opacity = 1;
-}
-const StopPoster = () =>{
-    PopUpPoster.style.display = "none";
-    PopUpPoster.style.opacity = 0;
-}
-
-document.getElementById("bouton_poster").addEventListener("click", Poster);
-document.getElementById("StopPoster").addEventListener("click", StopPoster);
-
-
 
 ///////Menus déroulants apparaissant sur les cotés
-
 
 
 
@@ -174,15 +198,11 @@ const DerouleParametres = () => {
 ParametresEstOuvert = true;
 MenuEstOuvert = true;
 
-MenuDeroulant = document.getElementById("menu-deroulant");
 
-let ZoneTags = document.getElementById("zone_tags");
-let zone_parametres = document.getElementById("zone_parametres");
 
 document.getElementById("menu-hamburger").addEventListener("click", DerouleMenu);
 document.getElementById("StopMenu").addEventListener("click", DerouleMenu);
 document.getElementById("LienParametres").addEventListener("click", DerouleParametres);
-
 
 
 
@@ -192,19 +212,11 @@ document.getElementById("LienParametres").addEventListener("click", DerouleParam
 
 const CorbeillePoste = (i) => {
     PopUpSupprime.style.display = "flex";
-    document.getElementById("BoutonSupprime").addEventListener("click", function(){SupprimePoste(i)});
-    
-}
-const SupprimePoste = (i) => {
-    PopUpSupprime.style.display = "none";
-    postes[i].style.display = "none";
 }
 
-let PopUpSupprime = document.getElementById("PopUpSupprime");
-let CorbeillesBlanches = document.getElementsByClassName("CorbeilleBlanc");
-let CorbeillesBleues = document.getElementsByClassName("CorbeilleBleu");
 
-for (let i = 0; i < postes.length; i++) {
+
+for (let i = 0; i < CorbeillesBlanches.length; i++) {
     CorbeillesBlanches[i].addEventListener("click", function(){CorbeillePoste(i)});
     CorbeillesBleues[i].addEventListener("click", function(){CorbeillePoste(i)});
 }

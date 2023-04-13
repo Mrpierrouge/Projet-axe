@@ -15,13 +15,13 @@
 
     <?php require_once '../navbar.php'; ?>
 
-    
+
     <?php if (isset($_SESSION['user_actif']['pseudo'])) {
-        echo'<br>
+        echo '<br>
         <section id="zone-test" class="offset-3 col-6">
         <h2>
-        Vous êtes actuellement connecté sous le profil de : ' .$_SESSION['user_actif']['pseudo'] .'
-        </h2>' .' 
+        Vous êtes actuellement connecté sous le profil de : ' . $_SESSION['user_actif']['pseudo'] . '
+        </h2>' . ' 
         </section>
         <br><br><br>';
         echo '<section id="zone_posts">';
@@ -59,6 +59,13 @@
       <input type="hidden" name="form" value="formulaire_deconnexion">
       <input type="submit" value="Se déconnecter">
       </form>';
+        echo '
+        <div id="bouton_poster" class="theme_dark">
+            <img src="../img/AjouterBlanc.png" alt="ajouter" id="AjouteLight" class="PictoAjoute">
+            <img src="../img/AjouterBleu.png" alt="ajouter" id="AjouteDark" class="PictoAjoute">
+        </div>';
+        echo'<script src="../js/popup_poster.js">
+        </script>';
 
     } elseif (!isset($_SESSION['user_actif']['pseudo'])) {
         echo '
@@ -114,11 +121,11 @@
         </section>
         ';
     } ?>
-
+    <?php require_once("../popups.php") ?>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
-    <script src="../js/test.js"></script>
+    <script src="../js/compte.js"></script>
 </body>
 
 </html>

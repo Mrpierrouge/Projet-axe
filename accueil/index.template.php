@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="../css/1main.css">
 </head>
 
-<body id="body" class="theme_light">
+<body id="body" class="theme_light theme_grp2">
 
     <?php require_once '../navbar.php'; ?>
 
@@ -25,14 +25,14 @@
 
         <div id="tags">
             <form action="" method="GET">
-                <input type="submit" class="tag theme_light" name="tag" value="#Bleu">
-                <input type="submit" class="tag theme_light" name="tag" value="#Violet">
-                <input type="submit" class="tag theme_light" name="tag" value="#Rose">
-                <input type="submit" class="tag theme_light" name="tag" value="#Rouge">
-                <input type="submit" class="tag theme_light" name="tag" value="#Orange">
-                <input type="submit" class="tag theme_light" name="tag" value="#Jaune">
-                <input type="submit" class="tag theme_light" name="tag" value="#Vert">
-                <input type="submit" class="tag theme_light" name="tag" value="#Marron">
+                <input type="submit" class="tag theme_dark theme_grp1" name="tag" value="#Bleu">
+                <input type="submit" class="tag theme_dark theme_grp1" name="tag" value="#Violet">
+                <input type="submit" class="tag theme_dark theme_grp1" name="tag" value="#Rose">
+                <input type="submit" class="tag theme_dark theme_grp1" name="tag" value="#Rouge">
+                <input type="submit" class="tag theme_dark theme_grp1" name="tag" value="#Orange">
+                <input type="submit" class="tag theme_dark theme_grp1" name="tag" value="#Jaune">
+                <input type="submit" class="tag theme_dark theme_grp1" name="tag" value="#Vert">
+                <input type="submit" class="tag theme_dark theme_grp1" name="tag" value="#Marron">
                 <input type="submit" name="tag" value="Annuler les filtres">
             </form>
 
@@ -44,7 +44,7 @@
 
     <section id="zone_posts">
         <?php foreach ($postes as $poste): ?>
-            <div class="post theme_dark">
+            <div class="post theme_dark theme_grp1">
                 <div class="EntetePoste">
                     <h2>
                         <?php echo $poste['pseudo'] ?>
@@ -52,7 +52,7 @@
                     <?php if (isset($_SESSION['user_actif']['pseudo']) && $_SESSION['user_actif']['pseudo'] === $poste['pseudo']) {
                         echo '<img src="../img/corbeille-blanc.png" class="CorbeilleBlanc">
                     <img src="../img/corbeille-bleu.png" class="CorbeilleBleu">
-                    <div id="PopUpSupprime" class="popup theme_dark PopUpSupprime">
+                    <div id="PopUpSupprime" class="popup theme_dark theme_grp1 PopUpSupprime">
                         <p> Voulez-vous vraiment supprimer ce post ?</p>
                         <form action="delete_post.php" method="POST">
                             <input type="hidden" name="form" value="formulaire_delete_poste">
@@ -69,7 +69,7 @@
                     <?php echo $poste['contenu'] ?>
                 </p>
                 <?php if (isset($poste['tag'])) {
-                    echo '<p class="poste_tag theme_dark">
+                    echo '<p class="poste_tag theme_dark theme_grp1">
                     ' . $poste['tag'] . '
                     </p>';
                 } ?>
@@ -81,7 +81,7 @@
         <?php endforeach; ?>
     </section>
 
-    <div id="bouton_poster" class="theme_dark">
+    <div id="bouton_poster" class="theme_dark theme_grp1">
         <img src="../img/AjouterBlanc.png" alt="ajouter" id="AjouteLight" class="PictoAjoute">
         <img src="../img/AjouterBleu.png" alt="ajouter" id="AjouteDark" class="PictoAjoute">
     </div>
@@ -125,6 +125,7 @@
         crossorigin="anonymous"></script>
     <script src="../js/main.js"></script>
     <script src="../js/popup_poster.js"></script>
+    <script src="../js/theme.js"></script>
 
 </body>
 

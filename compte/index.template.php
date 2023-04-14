@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="../css/1main.css">
 </head>
 
-<body id="body" class="theme_light">
+<body id="body" class="theme_light theme_grp2">
 
     <?php require_once '../navbar.php'; ?>
 
@@ -28,7 +28,7 @@
         </section>
         <br><br><br>';
         echo '<section id="zone_posts">
-        <h1>Vos postes</h1>';
+        <h1>Vos postes : </h1>';
         foreach ($postes as $poste) {
             echo '
             <div class="post theme_dark">
@@ -42,7 +42,7 @@
                 <p class="description">
             ' . $poste['contenu'];
                 if (isset($poste['tag'])){
-                echo'<p class="poste_tag theme_dark">
+                echo'<p class="poste_tag theme_dark theme_grp1">
                 ' . $poste['tag'] . '
                 </p>';
                 }
@@ -52,7 +52,7 @@
                 </p>
             </div>';
             echo '
-                    <div id="PopUpSupprime" class="popup theme_dark PopUpSupprime">
+                    <div id="PopUpSupprime" class="popup theme_dark theme_grp1 PopUpSupprime">
                         <p> Voulez-vous vraiment supprimer ce post ?</p>
                         <form action="delete_post.php" method="POST">
                             <input type="hidden" name="form" value="formulaire_delete_poste">
@@ -65,7 +65,7 @@
         echo '</section>';
         echo '<br><br><br>';
         echo '
-        <div id="bouton_poster" class="theme_dark">
+        <div id="bouton_poster" class="theme_dark theme_grp1">
             <img src="../img/AjouterBlanc.png" alt="ajouter" id="AjouteLight" class="PictoAjoute">
             <img src="../img/AjouterBleu.png" alt="ajouter" id="AjouteDark" class="PictoAjoute">
         </div>';
@@ -131,6 +131,7 @@
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
     <script src="../js/compte.js"></script>
+    <script src="../js/theme.js"></script>
 </body>
 
 </html>

@@ -1,11 +1,11 @@
-<div id="popup_connexion" class="popup theme_dark">
+<div id="popup_connexion" class="popup theme_dark theme_grp1">
 
   CONNECTEZ-VOUS!
   <a href="http://localhost/projet_axe/compte/index.php" id="SeConnecter"> Se connecter</a>
 
 </div>
 
-<div id="PopUpPoster" class="popup theme_dark">
+<div id="PopUpPoster" class="popup theme_dark theme_grp1">
 
   <button id="StopPoster" class="StopPopUp"> Fermer </button>
   <?php if (isset($_SESSION['user_actif']['pseudo'])) {
@@ -55,7 +55,7 @@
   ;
   if (!isset($_SESSION['user_actif']['pseudo'])) {
     echo "<p>vous n'êtes pas connecter<p>";
-    echo '<a class="theme_dark  " id="lien_connexion" href="http://localhost/projet_axe/compte/index.php"> Se connecter</a>';
+    echo '<a class="theme_dark theme_grp1  " id="lien_connexion" href="http://localhost/projet_axe/compte/index.php"> Se connecter</a>';
   }
   ?>
 </div>

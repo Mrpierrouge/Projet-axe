@@ -20,8 +20,30 @@
         <br>
         <textarea name="contenu" id="contenu" cols="30" rows="10"></textarea>
         <br>
+        <label for="pet-select"> Tags </label>
+
+      <select name="tag" id="tag">
+        <option value=""></option>
+        <option value="#Bleu">#Bleu</option>
+        <option value="#Violet">#Violet</option>
+        <option value="#Rose">#Rose</option>
+        <option value="#Rouge">#Rouge</option>
+        <option value="#Orange">#Orange</option>
+        <option value="#Jaune">#Jaune</option>
+        <option value="#Vert">#Vert</option>
+        <option value="#Marron">#Marron</option>
+      </select>
         <input type="submit" value="Envoyer">
-      </form>';
+      </form>
+
+      <script>
+
+    contenu.value = localStorage.getItem("contenu");
+    contenu.oninput = () => {
+    localStorage.setItem("contenu", contenu.value)
+    };
+ 
+      </script>';
     echo '<br><br>';
     echo '<p>Actuellement sous le profil de : ' . $_SESSION['user_actif']['pseudo'];
 

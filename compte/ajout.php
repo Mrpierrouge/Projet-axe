@@ -14,9 +14,10 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
             
             $data = [
                 'contenu' => $_POST['contenu'],
-                'user_id' => $_POST['user']
+                'user_id' => $_POST['user'],
+                'tag' => $_POST['tag']
             ];
-            $request = $database->prepare("INSERT INTO postes (contenu, user_id, date) VALUES (:contenu, :user_id, NOW())");
+            $request = $database->prepare("INSERT INTO postes (contenu, user_id, date, tag) VALUES (:contenu, :user_id, NOW(), :tag)");
             $request->execute($data);
         }
         header("Location: index.php");

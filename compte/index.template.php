@@ -40,8 +40,13 @@
                     <img src="../img/corbeille-bleu.png" class="CorbeilleBleu">
                 </div>
                 <p class="description">
-            ' . $poste['contenu'] . '
-                </p>
+            ' . $poste['contenu'];
+                if (isset($poste['tag'])){
+                echo'<p class="poste_tag theme_dark">
+                ' . $poste['tag'] . '
+                </p>';
+                }
+                echo'</p>
                 <p>
                 "Écrit le " ' . date("d/m/Y", strtotime($poste['date'])) . " à " . date("H:i", strtotime($poste['date'])) . '
                 </p>
@@ -51,7 +56,7 @@
                         <p> Voulez-vous vraiment supprimer ce post ?</p>
                         <form action="delete_post.php" method="POST">
                             <input type="hidden" name="form" value="formulaire_delete_poste">
-                            <input type="hidden" name="poste_id" value="' . $poste['id'] . '">
+                            <input type="hidden" name="poste_id" value="' . $poste['poste_id'] . '">
                             <input type="submit" value="Supprimer">
                             </form>
                         <button id="SupprimeNon" class="StopPopUp"> Non </button>

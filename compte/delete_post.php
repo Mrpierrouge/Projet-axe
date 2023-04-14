@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
                 'poste_id' => $_POST['poste_id'],
 
             ];
-            $request = $database->prepare("DELETE FROM postes WHERE postes.id = :poste_id");
+            $request = $database->prepare("DELETE FROM postes WHERE poste_id = :poste_id");
             $request->execute($data);
             header("Location: index.php");
         }

@@ -1,12 +1,5 @@
             //// appel du document
 
-//// pour theme de couleur
-
-let LogoBlanc = document.getElementById("logo-light");
-let LogoNoir = document.getElementById("logo-dark");
-let AjouteBlanc = document.getElementById("AjouteLight");
-let AjouteNoir = document.getElementById("AjouteDark");
-
 //// pour la popup en scrollant
 
 

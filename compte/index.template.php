@@ -31,7 +31,7 @@
         <h1>Vos postes : </h1>';
         foreach ($postes as $poste) {
             echo '
-            <div class="post theme_dark">
+            <div class="post theme_dark theme_grp1">
                 <div class="EntetePoste">
                     <h2>' .
                 $poste['pseudo'] . '

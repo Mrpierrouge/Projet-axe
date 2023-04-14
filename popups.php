@@ -38,9 +38,13 @@
 
       <script>
 
+    tag.value = localStorage.getItem("tag");
+    tag.onchange = () => {
+        localStorage.setItem("tag", tag.value)
+    };
     contenu.value = localStorage.getItem("contenu");
     contenu.oninput = () => {
-    localStorage.setItem("contenu", contenu.value)
+        localStorage.setItem("contenu", contenu.value)
     };
  
       </script>';

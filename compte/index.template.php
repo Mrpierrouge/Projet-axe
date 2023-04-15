@@ -38,9 +38,11 @@
                     </h2>
                     <img src="../img/corbeille-blanc.png" class="CorbeilleBlanc">
                     <img src="../img/corbeille-bleu.png" class="CorbeilleBleu">
-                </div>
-                <p class="description">
-            ' . $poste['contenu'];
+                </div>';
+                if ($poste['media']!=null){
+                    echo '<img src="' . $poste['media'] . '" class ="image_post theme_light theme_grp2" alt ="image_poste">';
+                }
+            echo '<p class="description">' . $poste['contenu'];
                 if (isset($poste['tag'])){
                 echo'<p class="poste_tag theme_dark theme_grp1">
                 ' . $poste['tag'] . '

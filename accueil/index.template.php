@@ -65,6 +65,11 @@
                     ;
                     ?>
                 </div>
+                <?php
+                if ($poste['media'] != null) {
+                    echo '<img src="' . $poste['media'] . '" class ="image_post theme_light theme_grp2" alt ="image_poste">';
+                }
+                ; ?>
                 <p class="description">
                     <?php echo $poste['contenu'] ?>
                 </p>

@@ -10,15 +10,15 @@
   <button id="StopPoster" class="StopPopUp"> Fermer </button>
   <?php if (isset($_SESSION['user_actif']['pseudo'])) {
     echo '<h2>Poster</h2>
-      <form action="ajout.php" method="POST">
+      <form action="ajout.php" method="POST" enctype="multipart/form-data">
         <input type="hidden" name="form" value="formulaire_ajout_poste">
         <input type="hidden" name="user" value="' . $_SESSION['user_actif']["id"] . '">
-        <label id="label_file">Photo : </label>
-        <input type="file">
+        <label for="media">Photo : </label>
+        <input type="file" accept="image/png, image/jpeg" name="media">
         <br>
         <label for="contenu">Contenu :</label>
         <br>
-        <textarea name="contenu" id="contenu" cols="30" rows="10"></textarea>
+        <textarea name="contenu" id="contenu" cols="30" rows="10"  required></textarea>
         <br>
         <label for="pet-select"> Tags </label>
 

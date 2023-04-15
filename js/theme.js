@@ -26,8 +26,11 @@ const ChangerTheme = () => {
         
         LogoBlanc.style.display = "none";
         LogoNoir.style.display = "block";
-        AjouteNoir.style.display = "block";
-        AjouteBlanc.style.display = "none";
+        if (AjouteNoir != null){
+            AjouteNoir.style.display = "block";
+            AjouteBlanc.style.display = "none";
+        }
+
     }
     else {   
         for (let i = 0; i < darks.length; i++) {
@@ -46,8 +49,10 @@ const ChangerTheme = () => {
         }
         LogoNoir.style.display = "none";
         LogoBlanc.style.display = "block";
-        AjouteNoir.style.display = "none";
-        AjouteBlanc.style.display = "block";
+        if (AjouteBlanc != null){
+            AjouteNoir.style.display = "none";
+            AjouteBlanc.style.display = "block";
+        }
     }
     themelight = !themelight;
 }

@@ -20,6 +20,7 @@
 	transition: 1s;
 	width: 50%;
 	z-index: 9000;
+	justify-content:space-around;
 }
 #liens_menu{
 	display: flex;

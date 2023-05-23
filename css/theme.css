@@ -20,3 +20,35 @@
 .theme_dark > a:hover{
     color:white;
 }
+
+.tag_Rose{
+    color: rgb(253, 167, 182);
+}
+
+.tag_Violet{
+    color: rgb(216, 0, 216);
+}
+
+.tag_Bleu{
+    color: rgb(0, 140, 255);
+}
+
+.tag_Vert{
+    color: rgb(0, 216, 0);
+}
+
+.tag_Rouge{
+    color: red;
+}
+
+.tag_Orange{
+    color: rgb(255, 166, 0);
+}
+
+.tag_Jaune{
+    color: yellow;
+}
+
+.tag_Marron{
+    color: rgb(168, 72, 72);
+}

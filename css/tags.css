@@ -17,6 +17,7 @@
     padding: 1px;
     cursor: pointer;
     margin-bottom: 2px;
+    transition: 1s;
 }
 .poste_tag{
     margin-left: 10%;

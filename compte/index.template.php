@@ -36,8 +36,8 @@
                     <h2>' .
                 $poste['pseudo'] . '
                     </h2>
-                    <img src="../img/corbeille-blanc.png" class="CorbeilleBlanc">
-                    <img src="../img/corbeille-bleu.png" class="CorbeilleBleu">
+                    <img src="../img/corbeille-blanc.png" class="CorbeilleBlanc alt="supprimer poste">
+                    <img src="../img/corbeille-bleu.png" class="CorbeilleBleu" alt="supprimer poste">
                 </div>';
                 if ($poste['media']!=null){
                     echo '<img src="' . $poste['media'] . '" class ="image_post theme_light theme_grp2" alt ="image_poste">';
@@ -54,7 +54,7 @@
                 </p>
             </div>';
             echo '
-                    <div id="PopUpSupprime" class="popup theme_dark theme_grp1 PopUpSupprime">
+                    <div class="popup theme_dark theme_grp1 PopUpSupprime">
                         <p> Voulez-vous vraiment supprimer ce post ?</p>
                         <form action="delete_post.php" method="POST">
                             <input type="hidden" name="form" value="formulaire_delete_poste">

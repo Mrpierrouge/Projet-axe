@@ -20,7 +20,7 @@ let postes = document.getElementsByClassName("post");
 let CorbeillesBlanches = document.getElementsByClassName("CorbeilleBlanc");
 let CorbeillesBleues = document.getElementsByClassName("CorbeilleBleu");
 
-let PopUpSupprime = document.getElementById("PopUpSupprime");
+let PopUpSupprime = document.getElementsByClassName("PopUpSupprime");
 
 
 
@@ -88,10 +88,8 @@ document.getElementById("LienParametres").addEventListener("click", DerouleParam
 
 
 const CorbeillePoste = (i) => {
-    PopUpSupprime.style.display = "flex";
+    PopUpSupprime[i].style.display = "flex";
 }
-
-
 
 for (let i = 0; i < CorbeillesBlanches.length; i++) {
     CorbeillesBlanches[i].addEventListener("click", function(){CorbeillePoste(i)});

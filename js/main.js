@@ -22,7 +22,7 @@ let postes = document.getElementsByClassName("post");
 let CorbeillesBlanches = document.getElementsByClassName("CorbeilleBlanc");
 let CorbeillesBleues = document.getElementsByClassName("CorbeilleBleu");
 
-let PopUpSupprime = document.getElementById("PopUpSupprime");
+let PopUpSupprime = document.getElementsByClassName("PopUpSupprime");
 
 
 
@@ -35,8 +35,6 @@ let PopUpSupprime = document.getElementById("PopUpSupprime");
 
 
 const StopPopUp = () => {
-    zone_postes.style.filter = "blur(0px)";
-    ZoneTags.style.filter = "blur(0px)";
     for (let i = 0; i < popups.length; i++) {
         popups[i].style.display = "none";
 
@@ -102,7 +100,7 @@ document.getElementById("LienParametres").addEventListener("click", DerouleParam
 
 
 const CorbeillePoste = (i) => {
-    PopUpSupprime.style.display = "flex";
+    PopUpSupprime[i].style.display = "flex";
 }
 
 

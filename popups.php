@@ -1,6 +1,7 @@
 <div id="popup_connexion" class="popup theme_dark theme_grp1">
-
-  CONNECTEZ-VOUS!
+  <img src="../img/logo-detourne.png" alt="logo">
+  <p>Connectez vous pour continuer!</p>
+  
   <a href="http://localhost/projet_axe/compte/index.php" id="SeConnecter"> Se connecter</a>
 
 </div>

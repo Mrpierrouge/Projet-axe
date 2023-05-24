@@ -1,6 +1,15 @@
 <div id="menu-deroulant" class="theme_dark theme_grp1">
     <button id="StopMenu">Fermer</button>
 
+    <div class="zone_horloge2">
+                <div class="zone_cadran">
+                    <img src="../img/cadran.png" alt="horloge" id="cadran2">
+                    <div id="petite_aiguille2"></div>
+                    <div id="grande_aiguille2"></div>
+                    <div id="aiguille_seconde2"></div>
+                </div>
+                <p id="heure2">00:00:00</p>
+        </div>
     <div id="liens_menu" class="theme_dark theme_grp1">
         <a href="http://localhost/projet_axe/accueil/index.php">Accueil</a>
         <a href="http://localhost/projet_axe/compte/index.php" class="lien">Compte</a>

@@ -21,7 +21,7 @@
     flex-direction: column;
     opacity: 0;
     width: 90vw;
-    height: 85 vh;
+    height: 85vh;
     position: fixed;
     transition: 2s;
     gap: 10px;

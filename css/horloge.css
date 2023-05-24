@@ -1,0 +1,78 @@
+.zone_horloge{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 15%;
+    flex-wrap: wrap;
+    align-content: center;
+    min-width:200px;
+    margin-bottom: 310px;
+}
+.zone_cadran{
+    display: flex;
+    width: 200px;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+}
+#cadran{
+    position: absolute;
+    z-index:-1;
+}
+#grande_aiguille{
+    transform-origin: bottom;
+    position:absolute;
+    background-color: black;
+    z-index: 100;
+    min-width: 5px;
+    height: 25%;
+    top: 43px; 
+}
+#petite_aiguille{
+    position:absolute;
+    background-color: black;
+    z-index: 0;
+    min-width:5px;
+    height: 15%;
+    top: 68px;
+    transform-origin: bottom;
+}
+#aiguille_seconde{
+    transform-origin: bottom;
+    position: absolute;
+    background-color: red;
+    z-index: 2;
+    min-width:5px;
+    height: 25%;
+    top: 43px;
+}
+#heure{
+    display:flex;
+    justify-content: center;
+    font-size: 20px;
+}
+
+
+@media screen and (max-width: 1060px) {
+    .zone_cadran{
+        width: 100px;
+        height: 100px;
+    }
+    #cadran{
+        width: 100px;
+        height: 100px;
+    }
+    #aiguille_seconde{
+        min-width: 2px;
+        top: 18px;
+    }
+    #petite_aiguille{
+        min-width: 2px;
+        top: 31px;
+    }
+    #grande_aiguille{
+        min-width: 2px;
+        top: 19px;
+    }
+    
+}

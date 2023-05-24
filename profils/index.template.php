@@ -34,7 +34,7 @@
     
     <!-- <script src="../js/popup_poster.js"></script> -->
     <script src="../js/theme.js"></script>
-    <script src="../js/compte.js"></script>
+    <script src="../js/main.js"></script>
 </body>
 
 </html>

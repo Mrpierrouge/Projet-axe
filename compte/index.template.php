@@ -50,7 +50,7 @@
                 }
                 echo'</p>
                 <p>
-                "Écrit le " ' . date("d/m/Y", strtotime($poste['date'])) . " à " . date("H:i", strtotime($poste['date'])) . '
+                Écrit le  ' . date("d/m/Y", strtotime($poste['date'])) . " à " . date("H:i", strtotime($poste['date'])) . '
                 </p>
             </div>';
             echo '
@@ -76,53 +76,53 @@
 
     } elseif (!isset($_SESSION['user_actif']['pseudo'])) {
         echo '
-        <section id="zone_formulaires" class="offset-3 col-6">
-        <div>
+        <section id="zone_formulaires" class="offset-1 offset-md-2 col-md-9 offset-lg-3">
+        <div class="col-4 col-lg-3">
         <p>Créer un compte</p>
         <br>
         <form action="ajout_profil.php" method="POST">
         <input type="hidden" name="form" value="formulaire_ajout_compte">
-        <label for="contenu">Nom</label>
+        <label class="form-label" for="contenu">Nom</label>
         <br>
-        <input name="nom" id="nom">
+        <input class="form-control" name="nom" id="nom">
         <br>
-        <label for="contenu">Prenom :</label>
+        <label class="form-label" for="contenu">Prenom :</label>
         <br>
-        <input name="prenom" id="prenom">
+        <input class="form-control" name="prenom" id="prenom">
         <br>
-        <label for="contenu">Mail</label>
+        <label class="form-label" for="contenu">Mail</label>
         <br>
-        <input name="mail" id="mail">
+        <input class="form-control" name="mail" id="mail">
         <br>
-        <label for="contenu">Pseudo :</label>
+        <label class="form-label" for="contenu">Pseudo :</label>
         <br>
-        <input name="pseudo" id="pseudo">
+        <input class="form-control" name="pseudo" id="pseudo">
         <br>
-        <label for="contenu">Mot de passe</label>
+        <label class="form-label" for="contenu">Mot de passe</label>
         <br>
-        <input name="mdp" id="mdp">
+        <input class="form-control" type="password" name="mdp" id="mdp">
         <br>
-        <label for="contenu">Photo de profil (url)</label>
+        <label class="form-label" for="contenu">Photo de profil (url)</label>
         <br>
-        <input name="photo" id="photo">
+        <input class="form-control" name="photo" id="photo">
         <br>
-        <input type="submit" value="Envoyer">
+        <input class="btn btn-primary" type="submit" value="Envoyer">
         </form>
         </div>
-        <div>
+        <div class="offset-3 col-4 col-lg-3">
         <p>Se connecter</p>
         <br>
         <form action="" method="POST">
           <input type="hidden" name="form" value="formulaire_connection">
-          <label for="contenu">Pseudo :</label>
+          <label class="form-label" for="contenu">Pseudo :</label>
           <br>
-          <input name="pseudo" id="pseudo">
+          <input class="form-control" name="pseudo" id="pseudo">
           <br>
-          <label for="contenu">Mot de passe</label>
+          <label class="form-label" for="contenu">Mot de passe</label>
           <br>
-          <input name="mdp" id="mdp">
+          <input class="form-control" type="password" name="mdp" id="mdp">
           <br>
-          <input type="submit" value="Envoyer">
+          <input class="btn btn-primary" type="submit" value="Envoyer">
         </form>
         </div>
         </section>

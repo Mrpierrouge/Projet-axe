@@ -3,15 +3,10 @@ let LogoNoir = document.getElementById("logo-dark");
 let AjouteBlanc = document.getElementById("AjouteLight");
 let AjouteNoir = document.getElementById("AjouteDark");
 
-const Coucou = () =>{
-    console.log
-}
 const updateColor = (themelight) => {
-    console.log(themelight);
     let darks = document.getElementsByClassName("theme_grp1");
     let lights = document.getElementsByClassName("theme_grp2");
     if (themelight == "theme_dark") {
-        console.log("testtrue");   
         for (let i = 0; i < darks.length; i++) {
             darks[i].classList.add("theme_light");
             darks[i].classList.remove("theme_dark");
@@ -35,12 +30,9 @@ const updateColor = (themelight) => {
         }
     }
     else { 
-        console.log("testfalse");
         for (let i = 0; i < darks.length; i++) {
             darks[i].classList.add("theme_dark");
             darks[i].classList.remove("theme_light");
-            
-            
         } 
         for (let i = 0; i < lights.length; i++) {
             lights[i].classList.add("theme_light");
@@ -57,10 +49,6 @@ const updateColor = (themelight) => {
             AjouteBlanc.style.display = "block";
         }
     }
-    
-    console.log(themestorage)
-    
-    console.log(localStorage)
 
 
 }
@@ -72,7 +60,6 @@ updateColor(localStorage.getItem("themestorage"));
 const ChangerTheme = () => {
     themestorage = themestorage == "theme_dark" ? "theme_light" : "theme_dark";
     localStorage.setItem("themestorage", themestorage);
-    console.log(localStorage.getItem("themestorage"));
     updateColor(localStorage.getItem("themestorage"));
 
 }

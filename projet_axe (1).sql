@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:3306
--- Généré le : lun. 17 avr. 2023 à 12:05
+-- Généré le : mer. 24 mai 2023 à 15:17
 -- Version du serveur : 8.0.30
 -- Version de PHP : 8.1.10
 
@@ -41,11 +41,12 @@ CREATE TABLE `postes` (
 --
 
 INSERT INTO `postes` (`poste_id`, `contenu`, `user_id`, `date`, `tag`, `media`) VALUES
-(15, 'Le bleu du ciel n\'est pas le bleu de la mer. Ce bleu que moi je préfère.', 3, '2023-04-14 15:18:09', '#Orange', NULL),
-(20, 'Je voudrais un bonhomme de neige', 3, '2023-04-14 15:44:38', '#Bleu', NULL),
 (21, 'Je voudrais un bonhomme de neige', 4, '2023-04-14 15:48:22', '#Vert', NULL),
-(22, 'Je voudrais un bonhomme de neige', 3, '2023-04-14 17:07:18', '#Rouge', NULL),
-(34, 'Je poste la première image du site !', 3, '2023-04-15 20:07:18', '#Violet', '../img/image-equilibrium.jpeg');
+(41, 'Je poste la première image du site !', 3, '2023-04-17 16:42:21', '#Violet', '../img/image-equilibrium.jpeg'),
+(42, 'Le bleu du ciel n\'est pas le bleu de la mer. Ce bleu, que moi je préfère !', 3, '2023-04-17 16:43:58', '#Bleu', NULL),
+(44, 'Bonsoiiir Pariiiis !', 3, '2023-04-17 17:38:03', '#Vert', '../img/pack.png'),
+(45, 'Vous avec vu le nouveau film Mario ?', 4, '2023-04-19 16:10:25', '#Rouge', NULL),
+(46, 'Peach est vraiment nul dans le nouveau film mario...', 3, '2023-05-22 15:45:40', '#Rose', NULL);
 
 -- --------------------------------------------------------
 
@@ -95,7 +96,7 @@ ALTER TABLE `utilisateurs`
 -- AUTO_INCREMENT pour la table `postes`
 --
 ALTER TABLE `postes`
-  MODIFY `poste_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+  MODIFY `poste_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
 
 --
 -- AUTO_INCREMENT pour la table `utilisateurs`

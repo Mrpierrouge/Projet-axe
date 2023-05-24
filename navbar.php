@@ -5,7 +5,6 @@
         <a href="http://localhost/projet_axe/accueil/index.php">Accueil</a>
         <a href="http://localhost/projet_axe/compte/index.php" class="lien">Compte</a>
         <a href="http://localhost/projet_axe/profils/index.php" class="lien">Profils</a>
-        <a href="#ancrage_3" class="lien">Recherche</a>
     </div>
 
     <button class="BoutonTheme">Changer Theme</button>
@@ -25,11 +24,22 @@
         <a href="http://localhost/projet_axe/accueil/index.php">Accueil</a>
         <a href="http://localhost/projet_axe/compte/index.php" class="lien">Compte</a>
         <a href="http://localhost/projet_axe/profils/index.php" class="lien">Profils</a>
-        <a href="#ancrage_4" class="lien" id="LienParametres">Paramètres</a>
+        <a class="lien" id="LienParametres">Paramètres</a>
     </div>
 
 </section>
 
 <div id="zone_parametres" class="theme_dark theme_grp1">
         <button class="BoutonTheme">Changer Theme</button>
+        <div class="zone_horloge">
+                <div class="zone_cadran">
+                    <img src="../img/cadran.png" alt="horloge" id="cadran">
+                    <div id="petite_aiguille"></div>
+                    <div id="grande_aiguille"></div>
+                    <div id="aiguille_seconde"></div>
+                </div>
+                <p id="heure">00:00:00</p>
+        </div>
 </div>
+
+<script src="../js/horloge.js"></script>

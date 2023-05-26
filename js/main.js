@@ -11,6 +11,9 @@ let boutons_stop_popups = document.getElementsByClassName("StopPopUp");
 
 //// pour menu déroulant
 
+let zone_profils = document.getElementById("zone_profils");
+let zone_test = document.getElementById("zone-test");
+let zone_formulaires = document.getElementById("zone_formulaires");
 let MenuDeroulant = document.getElementById("menu-deroulant");
 let ZoneTags = document.getElementById("zone_tags");
 let zone_parametres = document.getElementById("zone_parametres");
@@ -56,24 +59,52 @@ for (let i = 0; i < boutons_stop_popups.length; i++) {
 ///////Menus déroulants apparaissant sur les cotés
 
 
-
-
 const DerouleMenu = () => {
     if (MenuEstOuvert) {
-        zone_postes.style.filter = "blur(5px)";
+        if (zone_formulaires !=null){
+            zone_formulaires.style.filter = "blur(5px)";
+        }
+        if (zone_test !=null){
+            zone_test.style.filter = "blur(5px)";
+        }
+        if (zone_postes !=null){
+            zone_postes.style.filter = "blur(5px)";
+        }
+        if (ZoneTags !=null){
+            ZoneTags.style.filter = "blur(5px)";
+        }
+        if (zone_profils !=null){
+            zone_profils.style.filter = "blur(5px)";
+        }
         bande.style.filter = "blur(5px)";
-        ZoneTags.style.filter = "blur(5px)";
         MenuDeroulant.style.transform = "translateX(0)";
        
     }
     else{
-        zone_postes.style.filter = "blur(0px)";
+        if (zone_postes !=null){
+            zone_postes.style.filter = "blur(0px)";
+        }
+        if (zone_test !=null){
+            zone_test.style.filter = "blur(0px)";
+        }
+        if (zone_formulaires !=null){
+            zone_formulaires.style.filter = "blur(0px)";
+        }
+        if (ZoneTags !=null){
+            ZoneTags.style.filter = "blur(0px)";
+        }
+        if (zone_profils !=null){
+            zone_profils.style.filter = "blur(0px)";
+        }
+        
+
         bande.style.filter = "blur(0px)";
-        ZoneTags.style.filter = "blur(0px)";
         MenuDeroulant.style.transform = "translateX(-100vw)";
     }
     MenuEstOuvert = !MenuEstOuvert;
 }
+
+
 const DerouleParametres = () => {
     if (ParametresEstOuvert) {
         zone_parametres.style.transform = "translateX(0)";

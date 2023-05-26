@@ -1,18 +1,18 @@
 .theme_dark{
-    color: #e1E1eb;
-    background-color: #405082;
+    color: var(--Light-color);
+    background-color: var(--Dark-color);
     transition: 1s;
 }
 .theme_light{
-    color:#405082;
-    background-color: #e1E1eb;
+    color: var(--Dark-color);
+    background-color: var(--Light-color);
     transition: 1s;
 }
 .theme_dark > a{
-    color: #e1E1eb;
+    color: var(--Light-color);
 }
 .theme_light > a {
-    color:#405082;
+    color:var(--Dark-color);
 }
 .theme_light > a:hover{
     color: #223264;

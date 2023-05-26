@@ -71,3 +71,29 @@
     justify-self: flex-end;
     cursor: pointer;
 }
+
+@media screen and (max-width: 600px) {
+	h2{
+		font-size: 20px;;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.CorbeilleBlanc{
+        height: 60%;
+    }
+    .CorbeilleBleu{
+        height: 60%;
+    }
+}
+@media screen and (max-width: 340px) {
+	.CorbeilleBlanc{
+        height: 40%;
+    }
+    .CorbeilleBleu{
+        height: 40%;
+    }
+    h2{
+		font-size: 15px;;
+	}
+}

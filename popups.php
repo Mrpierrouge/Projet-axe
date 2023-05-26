@@ -55,6 +55,7 @@
   }
   ;
   if (!isset($_SESSION['user_actif']['pseudo'])) {
+    echo '<img src="../img/logo-detourne.png" alt="logo">';
     echo "<p>vous n'êtes pas connecter<p>";
     echo '<a class="theme_dark theme_grp1  " id="lien_connexion" href="http://localhost/projet_axe/compte/index.php"> Se connecter</a>';
   }

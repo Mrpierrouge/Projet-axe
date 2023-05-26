@@ -36,8 +36,8 @@
                     <h2>' .
                 $poste['pseudo'] . '
                     </h2>
-                    <img src="../img/corbeille-blanc.png" class="CorbeilleBlanc alt="supprimer poste">
-                    <img src="../img/corbeille-bleu.png" class="CorbeilleBleu" alt="supprimer poste">
+                    <img src="../img/corbeille-blanc.png" class="CorbeilleBlanc" alt="Supprimer">
+                    <img src="../img/corbeille-bleu.png" class="CorbeilleBleu" alt="Supprimer">
                 </div>';
                 if ($poste['media']!=null){
                     echo '<img src="' . $poste['media'] . '" class ="image_post theme_light theme_grp2" alt ="image_poste">';
@@ -96,15 +96,11 @@
         <br>
         <label class="form-label" for="contenu">Pseudo :</label>
         <br>
-        <input class="form-control" name="pseudo" id="pseudo">
+        <input class="form-control" name="pseudo" >
         <br>
         <label class="form-label" for="contenu">Mot de passe</label>
         <br>
-        <input class="form-control" type="password" name="mdp" id="mdp">
-        <br>
-        <label class="form-label" for="contenu">Photo de profil (url)</label>
-        <br>
-        <input class="form-control" name="photo" id="photo">
+        <input class="form-control" type="password" name="mdp" >
         <br>
         <input class="btn btn-primary" type="submit" value="Envoyer">
         </form>
@@ -116,11 +112,11 @@
           <input type="hidden" name="form" value="formulaire_connection">
           <label class="form-label" for="contenu">Pseudo :</label>
           <br>
-          <input class="form-control" name="pseudo" id="pseudo">
+          <input class="form-control" name="pseudo" >
           <br>
           <label class="form-label" for="contenu">Mot de passe</label>
           <br>
-          <input class="form-control" type="password" name="mdp" id="mdp">
+          <input class="form-control" type="password" name="mdp" >
           <br>
           <input class="btn btn-primary" type="submit" value="Envoyer">
         </form>

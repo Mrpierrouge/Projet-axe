@@ -21,15 +21,15 @@
 
         <div id="tags">
             <form method="POST">
-                <input type="submit" class="tag theme_dark theme_grp1 <?php echo $_SESSION['tag_actif']?>" name="tag" value="Bleu" id="blue">
-                <input type="submit" class="tag theme_dark theme_grp1 <?php echo $_SESSION['tag_actif']?>" name="tag" value="Violet">
-                <input type="submit" class="tag theme_dark theme_grp1 <?php echo $_SESSION['tag_actif']?>" name="tag" value="Rose">
-                <input type="submit" class="tag theme_dark theme_grp1 <?php echo $_SESSION['tag_actif']?>" name="tag" value="Rouge">
-                <input type="submit" class="tag theme_dark theme_grp1 <?php echo $_SESSION['tag_actif']?>" name="tag" value="Orange">
-                <input type="submit" class="tag theme_dark theme_grp1 <?php echo $_SESSION['tag_actif']?>" name="tag" value="Jaune">
-                <input type="submit" class="tag theme_dark theme_grp1 <?php echo $_SESSION['tag_actif']?>" name="tag" value="Vert">
-                <input type="submit" class="tag theme_dark theme_grp1 <?php echo $_SESSION['tag_actif']?>" name="tag" value="Marron">
-                <input type="submit" name="tag" value="Annuler les filtres">
+                <input type="submit" class="tag theme_dark theme_grp1 <?php echo $_SESSION['tag_actif']?>" name="tag" value="Bleu" id="TagBleu">
+                <input type="submit" class="tag theme_dark theme_grp1 <?php echo $_SESSION['tag_actif']?>" name="tag" value="Violet" id="TagViolet">
+                <input type="submit" class="tag theme_dark theme_grp1 <?php echo $_SESSION['tag_actif']?>" name="tag" value="Rose" id="TagRose">
+                <input type="submit" class="tag theme_dark theme_grp1 <?php echo $_SESSION['tag_actif']?>" name="tag" value="Rouge" id="TagRouge">
+                <input type="submit" class="tag theme_dark theme_grp1 <?php echo $_SESSION['tag_actif']?>" name="tag" value="Orange" id="TagOrange">
+                <input type="submit" class="tag theme_dark theme_grp1 <?php echo $_SESSION['tag_actif']?>" name="tag" value="Jaune" id="TagJaune">
+                <input type="submit" class="tag theme_dark theme_grp1 <?php echo $_SESSION['tag_actif']?>" name="tag" value="Vert" id="TagVert">
+                <input type="submit" class="tag theme_dark theme_grp1 <?php echo $_SESSION['tag_actif']?>" name="tag" value="Marron" id="TagMarron">
+                <input type="submit" name="tag" value="Annuler les filtres" id="TagNone">
             </form>
 
         </div>
@@ -48,8 +48,8 @@
                         <?php echo $poste['pseudo']?>
                     </h2>
                     <?php if (isset($_SESSION['user_actif']['pseudo']) && $_SESSION['user_actif']['pseudo'] === $poste['pseudo']) {
-                        echo '<img src="../img/corbeille-blanc.png" class="CorbeilleBlanc alt="supprimer poste">
-                    <img src="../img/corbeille-bleu.png" class="CorbeilleBleu" alt="supprimer poste">
+                        echo '<img src="../img/corbeille-blanc.png" class="CorbeilleBlanc" alt="Supprimer">
+                    <img src="../img/corbeille-bleu.png" class="CorbeilleBleu" alt="Supprimer">
                     <div class="popup theme_light theme_grp1 PopUpSupprime">
                         <p> Voulez-vous vraiment supprimer ce post ?</p>
                         <form action="delete_post.php" method="POST">
@@ -57,7 +57,7 @@
                             <input type="hidden" name="poste_id" value="' . $poste['poste_id'] . '">
                             <input type="submit" value="Supprimer">
                             </form>
-                        <button id="SupprimeNon" class="StopPopUp"> Non </button>
+                        <button class="StopPopUp SupprimeNon"> Non </button>
                     </div>';
                     }
                     ;

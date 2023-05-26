@@ -7,6 +7,8 @@
 @import url(./popups.css);
 @import url(./compte.css);
 @import url(./horloge.css);
+@import url(./profils.css);
+
 *{
     padding: 0;
     margin: 0;
@@ -16,6 +18,13 @@
 p{
     margin: 0;
 }
+
+
+:root{
+    --Light-color: #e1E1eb;
+    --Dark-color: #405082;
+}
+
 
 .ZoneInput{
     padding-left: 30%;

@@ -34,7 +34,7 @@
     z-index: 0;
     min-width:5px;
     height: 15%;
-    top: 68px;
+    top: 67px;
     transform-origin: bottom;
 }
 #aiguille_seconde{
@@ -57,10 +57,10 @@
     flex-direction: column;
     position: absolute;
     top: 1%;
-    left: 10%;
+    right: 10%;
     flex-wrap: wrap;
     align-content: center;
-    min-width:200px;
+    min-width:100px;
     margin-bottom: 310px;
 }
 #cadran2{

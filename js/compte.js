@@ -2,7 +2,8 @@
 
 //// pour la popup en scrollant
 
-
+let zone_test = document.getElementById("zone-test");
+let zone_formulaires = document.getElementById("zone_formulaires");
 let zone_postes = document.getElementById("zone_posts");
 let popups = document.getElementsByClassName("popup");
 let boutons_stop_popups = document.getElementsByClassName("StopPopUp");
@@ -49,15 +50,32 @@ for (let i = 0; i < boutons_stop_popups.length; i++) {
 
 const DerouleMenu = () => {
     if (MenuEstOuvert) {
-        zone_postes.style.filter = "blur(5px)";
+        if (zone_formulaires !=null){
+            zone_formulaires.style.filter = "blur(5px)";
+        }
+        if (zone_test !=null){
+            zone_test.style.filter = "blur(5px)";
+        }
+        if (zone_postes !=null){
+            zone_postes.style.filter = "blur(5px)";
+        }
+        
         bande.style.filter = "blur(5px)";
         MenuDeroulant.style.transform = "translateX(0)";
        
     }
     else{
-        zone_postes.style.filter = "blur(0px)";
-        bande.style.filter = "blur(0px)";
+        if (zone_postes !=null){
+            zone_postes.style.filter = "blur(0px)";
+        }
+        if (zone_test !=null){
+            zone_test.style.filter = "blur(0px)";
+        }
+        if (zone_formulaires !=null){
+            zone_formulaires.style.filter = "blur(0px)";
+        }
 
+        bande.style.filter = "blur(0px)";
         MenuDeroulant.style.transform = "translateX(-100vw)";
     }
     MenuEstOuvert = !MenuEstOuvert;

@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
                 'pseudo' => $_POST['pseudo'],
                 'mail' => $_POST['mail'],
                 'mdp' => password_hash($_POST['mdp'],PASSWORD_BCRYPT),
-                'photo' => $_POST['photo']
+                'photo' => ""
             ];
             $request = $database->prepare("INSERT INTO utilisateurs (nom, prenom, pseudo, mail, mdp, photo) VALUES (:nom, :prenom, :pseudo, :mail, :mdp, :photo)");
             $request->execute($data);     

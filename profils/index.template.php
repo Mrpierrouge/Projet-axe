@@ -17,8 +17,28 @@
 
 
     <?php require_once '../popups.php'; ?>
+    <section id="zone_recherche">
+        <h2>Rechercher quelqu'un</h2>
+        <form action="" method="GET">
+        <label for="recherche">Rechercher : </label>
+        <br>
+        <input type="text" name="recherche" id="recherche">
 
+        </form>
+    </section>
 
+    <section id="zone_profils">
+        <?php foreach ($utilisateurs as $profil): ?>
+            <div class="profil theme_dark theme_grp1">
+                    <h2 class="pseudo_profil theme_dark theme_grp1">
+                        <a href="http://localhost/projet_axe/accueil/index.php?pseudo=<?php echo $profil['pseudo']?>">
+                            <?php echo $profil['pseudo'] ?>
+                        </a> 
+                    </h2>       
+            </div>
+
+        <?php endforeach; ?>
+        </section>
     <?php
     if (isset($_SESSION['user_actif']['pseudo'])) {
         echo'<div id="bouton_poster" class="theme_dark theme_grp1">
@@ -33,6 +53,7 @@
         crossorigin="anonymous"></script>
     
     <!-- <script src="../js/popup_poster.js"></script> -->
+    <script src="../js/profils.js"></script>
     <script src="../js/theme.js"></script>
     <script src="../js/main.js"></script>
 </body>

@@ -1,0 +1,34 @@
+#zone_profils{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding-bottom: 50px;
+    justify-content: center;
+    align-items: center;
+}
+.profil{
+    display: flex;
+    width: 60%;
+    border: 2px;
+    border-color: black;
+    border-style: solid;
+    max-width: 600px;
+    grid-template-columns: 40% 30%;
+}
+.pseudo_profil{
+    cursor: pointer;
+    justify-self: flex-start;
+    margin-left: 10%;
+}
+
+.pseudo_profil > a{
+    text-decoration: none;  
+}
+#zone_recherche{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 50px;
+}

@@ -26,6 +26,7 @@
 	font-size: 30px;
     text-decoration: none;
     text-align: center;
+	cursor: pointer;
 }
 .zone_logo{
 	display: flex;
@@ -56,6 +57,16 @@
 .BoutonTheme{
 	position: absolute;
 	bottom: 10%;
+	border: 0px;
+	padding: 5px;
+	border-radius: 10px;
+}
+
+.PulseLight:hover{
+	animation: pulseLight 1.5s infinite;
+}
+.PulseDark:hover{
+	animation: pulseDark 1.5s infinite;
 }
 #StopMenu{
 	position: absolute;
@@ -63,6 +74,7 @@
 	left: 5%;
 	z-index: 10;
 }
+
 @media screen and (max-width: 850px) {
 	#liens > a{
 		font-size: 20px;
@@ -85,6 +97,33 @@
 @media screen and (max-width: 600px) {
 	h1{
 		font-size: 25px;;
+	}
+}
+
+@keyframes pulseLight {
+	0% {
+	 box-shadow: 0 0 0 0 var(--Light-color);
+	}
+   
+	70% {
+	 box-shadow: 0 0 0 10px rgb(218 103 68 / 0%);
+	}
+   
+	100% {
+	 box-shadow: 0 0 0 0 rgb(218 103 68 / 0%);
+	}
+}
+@keyframes pulseDark {
+	0% {
+	 box-shadow: 0 0 0 0 var(--Dark-color);
+	}
+   
+	70% {
+	 box-shadow: 0 0 0 10px rgb(218 103 68 / 0%);
+	}
+   
+	100% {
+	 box-shadow: 0 0 0 0 rgb(218 103 68 / 0%);
 	}
 }
 

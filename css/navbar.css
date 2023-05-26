@@ -1,5 +1,6 @@
 #bande{
-	display: flex;
+	display: grid;
+	grid-template-columns: 20% 15% 15% 15% 15%;
 	margin-top:20px;
 	padding: 10px;
 	align-items: center;
@@ -15,22 +16,17 @@
 	padding-left: 10px;
 	width: 20%;
 }
-#liens{
-	width: 80%;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-    min-width: 210px;
-}
-#liens > a {
+
+#bande > a{
 	font-size: 30px;
     text-decoration: none;
     text-align: center;
 	cursor: pointer;
 }
+
 .zone_logo{
 	display: flex;
-	align-items:center;
+	align-items: center;
 	gap: 5px;
 }
 #logo-dark{
@@ -75,13 +71,13 @@
 	z-index: 10;
 }
 
-@media screen and (max-width: 850px) {
-	#liens > a{
+@media screen and (max-width: 940px) {
+	#bande > a{
 		font-size: 20px;
 	}	
 }
 @media screen and (max-width: 768px) {
-    #liens{
+    #bande > a{
 		display: none;
 	}
 	.zone_logo >img {
@@ -92,6 +88,9 @@
 	}
 	#zone_parametres{
 		opacity: 0;
+	}
+	#bande{
+		display: flex;
 	}
 }
 @media screen and (max-width: 600px) {

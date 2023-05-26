@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:3306
--- Généré le : mer. 24 mai 2023 à 15:17
+-- Généré le : ven. 26 mai 2023 à 20:48
 -- Version du serveur : 8.0.30
 -- Version de PHP : 8.1.10
 
@@ -45,8 +45,7 @@ INSERT INTO `postes` (`poste_id`, `contenu`, `user_id`, `date`, `tag`, `media`) 
 (41, 'Je poste la première image du site !', 3, '2023-04-17 16:42:21', '#Violet', '../img/image-equilibrium.jpeg'),
 (42, 'Le bleu du ciel n\'est pas le bleu de la mer. Ce bleu, que moi je préfère !', 3, '2023-04-17 16:43:58', '#Bleu', NULL),
 (44, 'Bonsoiiir Pariiiis !', 3, '2023-04-17 17:38:03', '#Vert', '../img/pack.png'),
-(45, 'Vous avec vu le nouveau film Mario ?', 4, '2023-04-19 16:10:25', '#Rouge', NULL),
-(46, 'Peach est vraiment nul dans le nouveau film mario...', 3, '2023-05-22 15:45:40', '#Rose', NULL);
+(45, 'Vous avec vu le nouveau film Mario ?', 4, '2023-04-19 16:10:25', '#Rouge', NULL);
 
 -- --------------------------------------------------------
 
@@ -70,7 +69,8 @@ CREATE TABLE `utilisateurs` (
 
 INSERT INTO `utilisateurs` (`id`, `nom`, `prenom`, `mail`, `pseudo`, `mdp`, `photo`) VALUES
 (3, 'LETARD', 'Pierric', 'pierric@radiomail-fr.com', 'pierricwsh', '$2y$10$.vOFoiU5SIYLGQzwqorVv.4lln3aPQO9mJq7Ooqf0/eyJVPrcvZQa', 'URL'),
-(4, 'Dupont', 'Jean', 'AntiKistari@gmail.com', 'Mrpierrouge', '$2y$10$T3SaHa5YOTEnf5PeG3zbce5.5ZIT2cVmKL25nbQErXltKOwTI2Mxe', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:AN');
+(4, 'Dupont', 'Jean', 'AntiKistari@gmail.com', 'Mrpierrouge', '$2y$10$T3SaHa5YOTEnf5PeG3zbce5.5ZIT2cVmKL25nbQErXltKOwTI2Mxe', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:AN'),
+(6, 'killian', 'latchimy', 'coucou@gmail.com', 'Istari', '$2y$10$qojNyhIm7VHtwoFpbI0XUe7I9tu8RDNmIypxeq/93C7Px1nMqpzS2', '');
 
 --
 -- Index pour les tables déchargées
@@ -96,13 +96,13 @@ ALTER TABLE `utilisateurs`
 -- AUTO_INCREMENT pour la table `postes`
 --
 ALTER TABLE `postes`
-  MODIFY `poste_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
+  MODIFY `poste_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
 
 --
 -- AUTO_INCREMENT pour la table `utilisateurs`
 --
 ALTER TABLE `utilisateurs`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

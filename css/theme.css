@@ -2,11 +2,13 @@
     color: var(--Light-color);
     background-color: var(--Dark-color);
     transition: 1s;
+    border-color:  var(--Dark-color);
 }
 .theme_light{
     color: var(--Dark-color);
     background-color: var(--Light-color);
     transition: 1s;
+    border-color:  var(--Light-color);
 }
 .theme_dark > a{
     color: var(--Light-color);
@@ -17,6 +19,7 @@
 .theme_light > a:hover{
     color: #223264;
 }
+
 .theme_dark > a:hover{
     color:white;
 }

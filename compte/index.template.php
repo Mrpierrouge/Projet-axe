@@ -48,7 +48,7 @@
                 ' . $poste['tag'] . '
                 </p>';
                 }
-                echo'</p>
+                echo'
                 <p>
                 Écrit le  ' . date("d/m/Y", strtotime($poste['date'])) . " à " . date("H:i", strtotime($poste['date'])) . '
                 </p>
@@ -61,7 +61,7 @@
                             <input type="hidden" name="poste_id" value="' . $poste['poste_id'] . '">
                             <input type="submit" value="Supprimer">
                             </form>
-                        <button id="SupprimeNon" class="StopPopUp"> Non </button>
+                        <button class="StopPopUp SupprimeNon"> Non </button>
                     </div>';
         }
         echo '</section>';
@@ -76,52 +76,56 @@
 
     } elseif (!isset($_SESSION['user_actif']['pseudo'])) {
         echo '
-        <section id="zone_formulaires" class="offset-1 offset-md-2 col-md-9 offset-lg-3">
+        <div class="container">
+        <div class="row">
+        <div id="zone_formulaires" class="offset-1 offset-md-2 col-md-9 offset-lg-3">
         <div class="col-4 col-lg-3">
         <p>Créer un compte</p>
         <br>
         <form action="ajout_profil.php" method="POST">
         <input type="hidden" name="form" value="formulaire_ajout_compte">
-        <label class="form-label" for="contenu">Nom</label>
+        <label class="form-label" for="nom">Nom</label>
         <br>
         <input class="form-control" name="nom" id="nom">
         <br>
-        <label class="form-label" for="contenu">Prenom :</label>
+        <label class="form-label" for="prenom">Prenom :</label>
         <br>
         <input class="form-control" name="prenom" id="prenom">
         <br>
-        <label class="form-label" for="contenu">Mail</label>
+        <label class="form-label" for="mail">Mail</label>
         <br>
         <input class="form-control" name="mail" id="mail">
         <br>
-        <label class="form-label" for="contenu">Pseudo :</label>
+        <label class="form-label" for="pseudo1">Pseudo :</label>
         <br>
-        <input class="form-control" name="pseudo" >
+        <input class="form-control" name="pseudo" id="pseudo1">
         <br>
-        <label class="form-label" for="contenu">Mot de passe</label>
+        <label class="form-label" for="mdp1">Mot de passe</label>
         <br>
-        <input class="form-control" type="password" name="mdp" >
+        <input class="form-control" type="password" name="mdp" id="mdp1">
         <br>
-        <input class="btn btn-primary" type="submit" value="Envoyer">
+        <input class="btn btn-primary theme_grp1 bouton_submit" type="submit" value="Envoyer">
         </form>
         </div>
         <div class="offset-3 col-4 col-lg-3">
         <p>Se connecter</p>
         <br>
-        <form action="" method="POST">
+        <form method="POST">
           <input type="hidden" name="form" value="formulaire_connection">
-          <label class="form-label" for="contenu">Pseudo :</label>
+          <label class="form-label" for="pseudo2">Pseudo :</label>
           <br>
-          <input class="form-control" name="pseudo" >
+          <input class="form-control" name="pseudo" id="pseudo2">
           <br>
-          <label class="form-label" for="contenu">Mot de passe</label>
+          <label class="form-label" for="mdp2">Mot de passe</label>
           <br>
-          <input class="form-control" type="password" name="mdp" >
+          <input class="form-control" type="password" name="mdp" id="mdp2">
           <br>
-          <input class="btn btn-primary" type="submit" value="Envoyer">
+          <input class="btn btn-primary theme_grp1 bouton_submit" type="submit" value="Envoyer">
         </form>
         </div>
-        </section>
+        </div>
+        </div>
+        </div>
         ';
     } ?>
     <?php require_once("../popups.php") ?>

@@ -1,0 +1,43 @@
+.zone_anim {
+    padding-top: 10px;
+    display: flex;
+    position: absolute;
+    bottom: 5vh;
+    width: 200px;
+    height: 60px;
+    z-index: 1;
+}
+  
+.cercle {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    border-radius: 50%;
+    background-color: #fff;
+    transform-origin: 50%;
+    animation: rebond .5s alternate infinite ease;
+}
+#cercle3{
+    left: 40%;
+    right: auto;
+    animation-delay: .2s;
+}
+  
+#cercle2{
+    left: 80%;
+    animation-delay: .3s;
+}
+@keyframes rebond {
+    0% {
+      top: 60px;
+      height: 5px;
+    }
+  
+    40% {
+      height: 20px;
+    }
+  
+    100% {
+      top: 0%;
+    }
+}

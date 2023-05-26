@@ -19,7 +19,7 @@
     <?php require_once '../popups.php'; ?>
     <section id="zone_recherche">
         <h2>Rechercher quelqu'un</h2>
-        <form action="" method="GET">
+        <form method="GET">
         <label for="recherche">Rechercher : </label>
         <br>
         <input type="text" name="recherche" id="recherche">

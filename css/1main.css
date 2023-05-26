@@ -8,6 +8,7 @@
 @import url(./compte.css);
 @import url(./horloge.css);
 @import url(./profils.css);
+@import url(./anim.css);
 
 *{
     padding: 0;

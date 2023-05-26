@@ -29,12 +29,12 @@
         <h1>NOM RESEAU</h1>
     </div>
 
-    <div id="liens" class="theme_dark theme_grp1">
-        <a href="http://localhost/projet_axe/accueil/index.php">Accueil</a>
-        <a href="http://localhost/projet_axe/compte/index.php" class="lien">Mon compte</a>
-        <a href="http://localhost/projet_axe/profils/index.php" class="lien">Profils</a>
-        <a class="lien" id="LienParametres">Paramètres</a>
-    </div>
+    
+    <a href="http://localhost/projet_axe/accueil/index.php">Accueil</a>
+    <a href="http://localhost/projet_axe/compte/index.php" class="lien">Mon compte</a>
+    <a href="http://localhost/projet_axe/profils/index.php" class="lien">Profils</a>
+    <a class="lien" id="LienParametres">Paramètres</a>
+    
 
 </section>
 

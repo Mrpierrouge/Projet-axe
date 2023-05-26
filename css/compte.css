@@ -10,3 +10,12 @@ p{
     padding-top: 5%;
     display: flex;
 }
+.theme_light.bouton_submit:hover{
+    background-color:white;
+    color: var(--Dark-color);
+
+}
+.theme_dark.bouton_submit:hover{
+    background-color: #223264;
+    color: var(--Light-color);
+}

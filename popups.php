@@ -4,6 +4,11 @@
   
   <a href="http://localhost/projet_axe/compte/index.php" id="SeConnecter"> Se connecter</a>
 
+  <div class="zone_anim">
+    <div class="cercle"></div>
+    <div class="cercle" id="cercle2"></div>
+    <div class="cercle" id="cercle3"></div>
+  </div>
 </div>
 
 <div id="PopUpPoster" class="popup theme_dark theme_grp1">
@@ -15,13 +20,13 @@
         <input type="hidden" name="form" value="formulaire_ajout_poste">
         <input type="hidden" name="user" value="' . $_SESSION['user_actif']["id"] . '">
         <label for="media">Photo : </label>
-        <input type="file" accept="image/png, image/jpeg" name="media">
+        <input type="file" accept="image/png, image/jpeg" name="media" id="media">
         <br>
         <label for="contenu">Contenu :</label>
         <br>
         <textarea name="contenu" id="contenu" cols="30" rows="10"  required></textarea>
         <br>
-        <label for="pet-select"> Tags </label>
+        <label for="tag"> Tags </label>
 
       <select name="tag" id="tag">
         <option value=""></option>

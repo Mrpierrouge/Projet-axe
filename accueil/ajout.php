@@ -11,7 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
         if (
             !empty($_POST['contenu']) && empty($_FILES['media']['name'])
         ) {
-            
+
             $data = [
                 'contenu' => $_POST['contenu'],
                 'user_id' => $_POST['user'],
@@ -19,15 +19,14 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
             ];
             $request = $database->prepare("INSERT INTO postes (contenu, user_id, date, tag) VALUES (:contenu, :user_id, NOW(), :tag)");
             $request->execute($data);
-        }
-        elseif (
+        } elseif (
             !empty($_POST['contenu'])
-            ) {
+        ) {
             $data_img = [
                 'img_link' => '../img/' . $_FILES['media']['name'],
                 'img_file' => $_FILES['media']['tmp_name']
             ];
-            move_uploaded_file($data_img['img_file'],$data_img['img_link']);
+            move_uploaded_file($data_img['img_file'], $data_img['img_link']);
             $data = [
                 'contenu' => $_POST['contenu'],
                 'user_id' => $_POST['user'],

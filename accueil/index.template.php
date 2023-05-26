@@ -10,6 +10,7 @@
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/1main.css">
 </head>
+
 <body id="body" class="theme_light theme_grp2">
 
     <?php require_once '../navbar.php'; ?>
@@ -21,14 +22,22 @@
 
         <div id="tags">
             <form method="POST">
-                <input type="submit" class="tag theme_dark theme_grp1 <?php echo $_SESSION['tag_actif']?>" name="tag" value="Bleu" id="TagBleu">
-                <input type="submit" class="tag theme_dark theme_grp1 <?php echo $_SESSION['tag_actif']?>" name="tag" value="Violet" id="TagViolet">
-                <input type="submit" class="tag theme_dark theme_grp1 <?php echo $_SESSION['tag_actif']?>" name="tag" value="Rose" id="TagRose">
-                <input type="submit" class="tag theme_dark theme_grp1 <?php echo $_SESSION['tag_actif']?>" name="tag" value="Rouge" id="TagRouge">
-                <input type="submit" class="tag theme_dark theme_grp1 <?php echo $_SESSION['tag_actif']?>" name="tag" value="Orange" id="TagOrange">
-                <input type="submit" class="tag theme_dark theme_grp1 <?php echo $_SESSION['tag_actif']?>" name="tag" value="Jaune" id="TagJaune">
-                <input type="submit" class="tag theme_dark theme_grp1 <?php echo $_SESSION['tag_actif']?>" name="tag" value="Vert" id="TagVert">
-                <input type="submit" class="tag theme_dark theme_grp1 <?php echo $_SESSION['tag_actif']?>" name="tag" value="Marron" id="TagMarron">
+                <input type="submit" class="tag theme_dark theme_grp1 <?php echo $_SESSION['tag_actif'] ?>" name="tag"
+                    value="Bleu" id="TagBleu">
+                <input type="submit" class="tag theme_dark theme_grp1 <?php echo $_SESSION['tag_actif'] ?>" name="tag"
+                    value="Violet" id="TagViolet">
+                <input type="submit" class="tag theme_dark theme_grp1 <?php echo $_SESSION['tag_actif'] ?>" name="tag"
+                    value="Rose" id="TagRose">
+                <input type="submit" class="tag theme_dark theme_grp1 <?php echo $_SESSION['tag_actif'] ?>" name="tag"
+                    value="Rouge" id="TagRouge">
+                <input type="submit" class="tag theme_dark theme_grp1 <?php echo $_SESSION['tag_actif'] ?>" name="tag"
+                    value="Orange" id="TagOrange">
+                <input type="submit" class="tag theme_dark theme_grp1 <?php echo $_SESSION['tag_actif'] ?>" name="tag"
+                    value="Jaune" id="TagJaune">
+                <input type="submit" class="tag theme_dark theme_grp1 <?php echo $_SESSION['tag_actif'] ?>" name="tag"
+                    value="Vert" id="TagVert">
+                <input type="submit" class="tag theme_dark theme_grp1 <?php echo $_SESSION['tag_actif'] ?>" name="tag"
+                    value="Marron" id="TagMarron">
                 <input type="submit" name="tag" value="Annuler les filtres" id="TagNone">
             </form>
 
@@ -44,8 +53,8 @@
         <?php foreach ($postes as $poste): ?>
             <div class="post theme_dark theme_grp1">
                 <div class="EntetePoste">
-                    <h2 class="<?php echo $_SESSION['tag_actif']?>">
-                        <?php echo $poste['pseudo']?>
+                    <h2 class="<?php echo $_SESSION['tag_actif'] ?>">
+                        <?php echo $poste['pseudo'] ?>
                     </h2>
                     <?php if (isset($_SESSION['user_actif']['pseudo']) && $_SESSION['user_actif']['pseudo'] === $poste['pseudo']) {
                         echo '<img src="../img/corbeille-blanc.png" class="CorbeilleBlanc" alt="Supprimer">
@@ -68,13 +77,13 @@
                     echo '<img src="' . $poste['media'] . '" class ="image_post theme_dark theme_grp2" alt ="image_poste">';
                 }
                 ; ?>
-                <p class="description <?php echo $_SESSION['tag_actif']?>">
+                <p class="description <?php echo $_SESSION['tag_actif'] ?>">
                     <?php echo $poste['contenu'] ?>
                 </p>
                 <?php if (isset($poste['tag'])) {
-                    echo '<p class="poste_tag theme_dark' .$_SESSION['tag_actif'] .' theme_grp1">' . $poste['tag'] . '</p>';
+                    echo '<p class="poste_tag theme_dark' . $_SESSION['tag_actif'] . ' theme_grp1">' . $poste['tag'] . '</p>';
                 } ?>
-                <p class="<?php echo $_SESSION['tag_actif']?>">
+                <p class="<?php echo $_SESSION['tag_actif'] ?>">
                     <?php echo "Écrit le " . date("d/m/Y", strtotime($poste['date'])) . " à " . date("H:i", strtotime($poste['date'])) ?>
                 </p>
 
@@ -105,7 +114,7 @@
     </script>';
     } ?>
 
-    
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
@@ -113,7 +122,7 @@
     <script src="../js/popup_poster.js"></script>
     <script src="../js/theme.js"></script>
 
-    
+
 
 </body>
 

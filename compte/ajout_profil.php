@@ -24,11 +24,11 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
                 'prenom' => $_POST['prenom'],
                 'pseudo' => $_POST['pseudo'],
                 'mail' => $_POST['mail'],
-                'mdp' => password_hash($_POST['mdp'],PASSWORD_BCRYPT),
+                'mdp' => password_hash($_POST['mdp'], PASSWORD_BCRYPT),
                 'photo' => ""
             ];
             $request = $database->prepare("INSERT INTO utilisateurs (nom, prenom, pseudo, mail, mdp, photo) VALUES (:nom, :prenom, :pseudo, :mail, :mdp, :photo)");
-            $request->execute($data);     
+            $request->execute($data);
         }
     }
     header("Location: index.php");

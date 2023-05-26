@@ -1,4 +1,4 @@
-            //// appel du document
+//// appel du document
 
 //// pour la popup en scrollant
 
@@ -14,7 +14,6 @@ let MenuDeroulant = document.getElementById("menu-deroulant");
 
 let zone_parametres = document.getElementById("zone_parametres");
 
-
 //// appel des éléments de postes
 
 let postes = document.getElementsByClassName("post");
@@ -23,93 +22,83 @@ let CorbeillesBleues = document.getElementsByClassName("CorbeilleBleu");
 
 let PopUpSupprime = document.getElementsByClassName("PopUpSupprime");
 
-
-
-            ////appel des différentes fonctions
-
+////appel des différentes fonctions
 
 //// Stop popups
 
-
 const StopPopUp = () => {
-    for (let i = 0; i < popups.length; i++) {
-        popups[i].style.display = "none";
-
-    }
-}
+  for (let i = 0; i < popups.length; i++) {
+    popups[i].style.display = "none";
+  }
+};
 
 for (let i = 0; i < boutons_stop_popups.length; i++) {
-    boutons_stop_popups[i].addEventListener("click",StopPopUp);
+  boutons_stop_popups[i].addEventListener("click", StopPopUp);
 }
-
 
 ///////Menus déroulants apparaissant sur les cotés
 
-
-
-
 const DerouleMenu = () => {
-    if (MenuEstOuvert) {
-        if (zone_formulaires !=null){
-            zone_formulaires.style.filter = "blur(5px)";
-        }
-        if (zone_test !=null){
-            zone_test.style.filter = "blur(5px)";
-        }
-        if (zone_postes !=null){
-            zone_postes.style.filter = "blur(5px)";
-        }
-        
-        bande.style.filter = "blur(5px)";
-        MenuDeroulant.style.transform = "translateX(0)";
-       
+  if (MenuEstOuvert) {
+    if (zone_formulaires != null) {
+      zone_formulaires.style.filter = "blur(5px)";
     }
-    else{
-        if (zone_postes !=null){
-            zone_postes.style.filter = "blur(0px)";
-        }
-        if (zone_test !=null){
-            zone_test.style.filter = "blur(0px)";
-        }
-        if (zone_formulaires !=null){
-            zone_formulaires.style.filter = "blur(0px)";
-        }
+    if (zone_test != null) {
+      zone_test.style.filter = "blur(5px)";
+    }
+    if (zone_postes != null) {
+      zone_postes.style.filter = "blur(5px)";
+    }
 
-        bande.style.filter = "blur(0px)";
-        MenuDeroulant.style.transform = "translateX(-100vw)";
+    bande.style.filter = "blur(5px)";
+    MenuDeroulant.style.transform = "translateX(0)";
+  } else {
+    if (zone_postes != null) {
+      zone_postes.style.filter = "blur(0px)";
     }
-    MenuEstOuvert = !MenuEstOuvert;
-}
+    if (zone_test != null) {
+      zone_test.style.filter = "blur(0px)";
+    }
+    if (zone_formulaires != null) {
+      zone_formulaires.style.filter = "blur(0px)";
+    }
+
+    bande.style.filter = "blur(0px)";
+    MenuDeroulant.style.transform = "translateX(-100vw)";
+  }
+  MenuEstOuvert = !MenuEstOuvert;
+};
 const DerouleParametres = () => {
-    if (ParametresEstOuvert) {
-        zone_parametres.style.transform = "translateX(0)";
-    }
-    else{
-        zone_parametres.style.transform = "translateX(100vw)";
-    }
-    ParametresEstOuvert = !ParametresEstOuvert;
-}
+  if (ParametresEstOuvert) {
+    zone_parametres.style.transform = "translateX(0)";
+  } else {
+    zone_parametres.style.transform = "translateX(100vw)";
+  }
+  ParametresEstOuvert = !ParametresEstOuvert;
+};
 
 ParametresEstOuvert = true;
 MenuEstOuvert = true;
 
-
-
-document.getElementById("menu-hamburger").addEventListener("click", DerouleMenu);
+document
+  .getElementById("menu-hamburger")
+  .addEventListener("click", DerouleMenu);
 document.getElementById("StopMenu").addEventListener("click", DerouleMenu);
-document.getElementById("LienParametres").addEventListener("click", DerouleParametres);
-
-
+document
+  .getElementById("LienParametres")
+  .addEventListener("click", DerouleParametres);
 
 ///// Supression de posts
 
-
-
 const CorbeillePoste = (i) => {
-    PopUpSupprime[i].style.display = "flex";
-}
+  PopUpSupprime[i].style.display = "flex";
+};
 
 for (let i = 0; i < CorbeillesBlanches.length; i++) {
-    CorbeillesBlanches[i].addEventListener("click", function(){CorbeillePoste(i)});
-    CorbeillesBleues[i].addEventListener("click", function(){CorbeillePoste(i)});
+  CorbeillesBlanches[i].addEventListener("click", function () {
+    CorbeillePoste(i);
+  });
+  CorbeillesBleues[i].addEventListener("click", function () {
+    CorbeillePoste(i);
+  });
 }

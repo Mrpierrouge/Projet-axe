@@ -1,7 +1,7 @@
 <div id="popup_connexion" class="popup theme_dark theme_grp1">
   <img src="../img/logo-detourne.png" alt="logo">
   <p>Connectez vous pour continuer!</p>
-  
+
   <a href="http://localhost/projet_axe/compte/index.php" id="SeConnecter"> Se connecter</a>
 
   <div class="zone_anim">
@@ -29,7 +29,7 @@
         <label for="tag"> Tags </label>
 
       <select name="tag" id="tag">
-        <option value=""></option>
+        <option value="">Aucun</option>
         <option value="#Bleu">#Bleu</option>
         <option value="#Violet">#Violet</option>
         <option value="#Rose">#Rose</option>

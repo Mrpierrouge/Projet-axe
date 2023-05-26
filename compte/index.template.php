@@ -39,16 +39,16 @@
                     <img src="../img/corbeille-blanc.png" class="CorbeilleBlanc" alt="Supprimer">
                     <img src="../img/corbeille-bleu.png" class="CorbeilleBleu" alt="Supprimer">
                 </div>';
-                if ($poste['media']!=null){
-                    echo '<img src="' . $poste['media'] . '" class ="image_post theme_light theme_grp2" alt ="image_poste">';
-                }
+            if ($poste['media'] != null) {
+                echo '<img src="' . $poste['media'] . '" class ="image_post theme_light theme_grp2" alt ="image_poste">';
+            }
             echo '<p class="description">' . $poste['contenu'];
-                if (isset($poste['tag'])){
-                echo'<p class="poste_tag theme_dark theme_grp1">
+            if (isset($poste['tag'])) {
+                echo '<p class="poste_tag theme_dark theme_grp1">
                 ' . $poste['tag'] . '
                 </p>';
-                }
-                echo'
+            }
+            echo '
                 <p>
                 Écrit le  ' . date("d/m/Y", strtotime($poste['date'])) . " à " . date("H:i", strtotime($poste['date'])) . '
                 </p>

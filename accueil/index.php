@@ -22,13 +22,12 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
         $request = $database->prepare("SELECT * FROM postes INNER JOIN utilisateurs ON postes.user_id = utilisateurs.id WHERE tag LIKE :tag ORDER BY date DESC");
         $request->execute($data);
         $postes = $request->fetchALL(PDO::FETCH_ASSOC);
-        $_SESSION["tag_actif"] = 'tag_'.$_POST['tag'];
-    }
-    elseif ($_POST['tag'] = "Annuler les filtres") {
+        $_SESSION["tag_actif"] = 'tag_' . $_POST['tag'];
+    } elseif ($_POST['tag'] = "Annuler les filtres") {
         $_SESSION["tag_actif"] = "";
     }
 }
-if ($_SERVER['REQUEST_METHOD'] === "GET"){
+if ($_SERVER['REQUEST_METHOD'] === "GET") {
     if (!empty($_GET['pseudo'])) {
         $data = [
             "pseudo" => $_GET['pseudo']

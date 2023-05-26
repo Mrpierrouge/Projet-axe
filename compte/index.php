@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
     if (
         isset($_POST['form']) && $_POST['form'] === "formulaire_connection"
     ) {
-        
+
         if (
             !empty($_POST['pseudo']) && !empty($_POST['mdp'])
         ) {
